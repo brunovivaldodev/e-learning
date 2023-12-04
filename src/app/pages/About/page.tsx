@@ -3,7 +3,7 @@ import inst from "../../../../public/aboutI.png";
 import Image from "next/image";
 import google from "../../../../public/google.png";
 import aboutR from "../../../../public/aboutR.png";
-import netflix from "../../../../public/netflix.png";
+import aboutA from "../../../../public/aboutA.png";
 import total from "../../../../public/total.png";
 import unitel from "../../../../public/unitel.png";
 import Footer from "@/app/components/Footer";
@@ -19,8 +19,8 @@ export default function About() {
             <Header/>
             <div className="w-full bg-gray-100 flex p-10 justify-center items-center">
                 <div className="space-y-2">
-                    <h3 className="text-2xl">Sobre</h3>
-                    <div className="text-sm">Home / <b>Sobre</b></div>
+                    <h3 className="text-2xl text-center">Sobre</h3>
+                    <div className="text-sm text-center">Home / <b>Sobre</b></div>
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2">
@@ -112,8 +112,8 @@ export default function About() {
                 <div></div> 
             </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 w-full bg-orange-100">
-                <div className="felx">
+            <div className="grid grid-cols-1 md:grid-cols-2 w-full bg-peach">
+                <div className="">
                     <Image height={365} src={aboutR} alt="Instrutores"/>
                 </div>
 
@@ -121,6 +121,49 @@ export default function About() {
                     <p className="text-sm text-orange-500">NOSSA MISSÃO</p>
                     <p className="text-4xl font-semibold">Criar um link mais facilitado entre os alunos e professores</p>
                     <p>“Não podemos resolver nossos problemas com o mesmo pensamento que usamos quando os criamos.” — Albert Einstein. As instituições demoram a mudar. Os comitês são onde as boas ideias e o pensamento inovador morrem. Escolha agilidade em vez de dogma. Abrace e impulsione a mudança. Precisamos limpar a lousa e começar com um pensamento ousado e radical.</p>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 w-full bg-gray-100 p-10">
+
+            <div className="p-10 space-y-4 mx-28">
+                    <p className="text-sm text-orange-500">A NOSSA GALERIA</p>
+                    <p className="text-4xl font-semibold">Queremos perpetuar o conhecimento por varios anos</p>
+                    <p>Fusce lobortis leo augue, sit amet tristique nisi commodo in. Aliquam ac libero quis tellus venenatis imperdiet. Sed sed nunc libero. Curabitur in urna ligula.  torquent per conubia nostra.</p>
+                    <div className="flex bg-orange-500 w-40 h-10 p-2 text-white">
+                        <a href="">Junta-se à família</a>
+                    </div>
+                </div>
+
+                <div>
+                    <Image src={aboutA} alt="aboutA"/>
+                </div>
+
+            </div>
+
+            <div className="flex justify-center space-x-12 mx-28 p-12">
+                <div className="">
+                    <div className="bg-gray-200 mb-4 p-4">
+                    O E-Tutor serviu como uma luva. A equipa seleciona cursos novos e atualizados em seu mercado e os disponibiliza aos clientes.
+                    </div>
+                    <p className="text-center">Bruno Tela</p>
+                    <p className="text-center text-sm">5º Ano, Engenharia Informática</p>
+                </div>
+
+                <div className="">
+                    <div className="bg-gray-200 mb-4 p-4">
+                    O E-Tutor serviu como uma luva. A equipa seleciona cursos novos e atualizados em seu mercado e os disponibiliza aos clientes.
+                    </div>
+                    <p className="text-center">Bruno Tela</p>
+                    <p className="text-center text-sm">5º Ano, Engenharia Informática</p>
+                </div>
+
+                <div className="">
+                    <div className="bg-gray-200 mb-4 p-4">
+                    O E-Tutor serviu como uma luva. A equipa seleciona cursos novos e atualizados em seu mercado e os disponibiliza aos clientes.
+                    </div>
+                    <p className="text-center">Bruno Tela</p>
+                    <p className="text-center text-sm">5º Ano, Engenharia Informática</p>
                 </div>
             </div>
             
