@@ -28,12 +28,12 @@ export default function Header(){
             </image>
             <div className="flex gap-4">
               <input
-                className="w-44 h-10 border-gray-800 border-2 outline-none bg-gray-300 pl-2"
+                className="w-44 h-10 border-gray-800 border-2 outline-none pl-2"
                 type="text"
                 placeholder="Procurar"
               />
               <input
-                className="w-72 h-10 border-gray-800 border-2 outline-none bg-gray-300 pl-2"
+                className="w-72 h-10 border-gray-800 border-2 outline-none pl-2"
                 type="text"
                 placeholder="O que você quer aprender ..."
               />
