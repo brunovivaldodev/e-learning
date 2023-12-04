@@ -1,10 +1,7 @@
 import Image from "next/image";
 import isptec from "../../public/Isptec.png";
 import course1 from "../../public/course1.png";
-import course2 from "../../public/course3.png";
 import istructor1 from "../../public/inscrutor1.png";
-import istructor2 from "../../public/inscrutor2.png";
-import istructor3 from "../../public/inscrutor3.png";
 import total from "../../public/total.png";
 import chevron from "../../public/chevron.png";
 import unitel from "../../public/unitel.png";
@@ -19,12 +16,12 @@ import {
   PaperPlaneRight,
 } from "@phosphor-icons/react/dist/ssr";
 import Header from "./components/Header";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      <Header/>
+      <Header />
       <div>
         <section className="mx-8">
           <div className="flex justify-center gap-8">
@@ -780,7 +777,7 @@ export default function Home() {
         </section>
       </div>
 
-      <Footer/>
+      <Footer />
     </main>
   );
 }
