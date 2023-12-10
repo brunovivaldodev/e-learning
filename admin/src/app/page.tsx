@@ -1,11 +1,8 @@
-import { Star } from "@phosphor-icons/react/dist/ssr";
 import { User } from "@nextui-org/react";
 import { Card } from "@/components/card";
 import { AreaChart } from "@/components/area-chart";
 import { BarChart } from "@/components/bar-chart";
 import { LineChart } from "@/components/line-chart";
-import { LineChartTest } from "@/components/line-chart-test";
-import { ProgressBar } from "@tremor/react";
 import { Header } from "@/components/header";
 import { Evaluation } from "@/components/evaluation";
 
