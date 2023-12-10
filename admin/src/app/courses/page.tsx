@@ -1,228 +1,690 @@
-import { Bell, MagnifyingGlass, Star } from "@phosphor-icons/react/dist/ssr";
-import { User } from "@nextui-org/react";
-import { Card } from "@/components/card";
-import { AreaChart } from "@/components/area-chart";
-import { BarChart } from "@/components/bar-chart";
-import { LineChart } from "@/components/line-chart";
-import { LineChartTest } from "@/components/line-chart-test";
-import { ProgressBar } from "@tremor/react";
+import {
+  DotsThree,
+  MagnifyingGlass,
+  Star,
+  User,
+} from "@phosphor-icons/react/dist/ssr";
+import course1 from "../../../public/course1.png";
+
 import { Header } from "@/components/header";
+import Image from "next/image";
+import { Pagination } from "@nextui-org/react";
 
 export default function Courses() {
   return (
     <main className="flex flex-col space-y-8">
       <Header page="Meus Cursos" />
-      <div className="mx-28 space-y-8">
-        <section className="grid grid-cols-4 gap-4">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+      <div className="flex flex-col mx-28 space-y-8">
+        <section className="flex gap-2">
+          <div className="flex flex-col">
+            <label className="text-sm text-gray-900">Procurar :</label>
+            <div className="flex items-center w-72 bg-slate-100 p-1">
+              <MagnifyingGlass size={20} />
+              <input
+                className="bg-slate-100 p-2 w-72 h-10"
+                type="text"
+                placeholder="Procurar os seus cursos"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <label className="text-sm text-gray-900">Ordenar por :</label>
+            <select className="bg-slate-100 p-2 w-56 h-12">
+              <option value="">Hoje</option>
+              <option value="">Ontem</option>
+            </select>
+          </div>
+          <div className="flex flex-col">
+            <label className="text-sm text-gray-900">Categoria</label>
+            <select className="bg-slate-100 p-2 w-60 h-12">
+              <option value="">Todas as categorias</option>
+              <option value="">Desenvolvimento</option>
+            </select>
+          </div>{" "}
+          <div className="flex flex-col">
+            <label className="text-sm text-gray-900">Classificação</label>
+            <select className="bg-slate-100 p-2 w-60 h-12">
+              <option value="">Mais de 4 estrelas</option>
+              <option value="">3 estrelas</option>
+            </select>
+          </div>
         </section>
-        <section className="flex flex-col gap-8">
-          <div className="flex gap-6">
-            <div className="flex flex-col w-80 bg-white">
-              <div className="h-12 flex items-center p-2 justify-between ">
-                <h4>Vista de perfil</h4>
-                <select className="bg-white ">
-                  <option value="">Hoje</option>
-                  <option value="">Ontem</option>
-                </select>
+        <section>
+          <div className="grid grid-cols-4 gap-4">
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
               </div>
               <div className="border"></div>
-              <div className="flex p-2">
-                <User
-                  name=""
-                  avatarProps={{
-                    src: "https://i.pravatar.cc/150?u=a04258114e29026702d",
-                  }}
-                />
-                <div>
-                  <p>
-                    <strong>Kevin</strong> comentou no seu curso{" "}
-                    <strong>React na prática</strong> {"  "}
-                    "Muito bom esse curso gostei"
-                  </p>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
                 </div>
               </div>
-              <div className="flex p-2">
-                <User
-                  name=""
-                  avatarProps={{
-                    src: "https://i.pravatar.cc/150?u=a04258114e29026702d",
-                  }}
-                />
-                <div>
-                  <p>
-                    <strong>Kevin</strong> comentou no seu curso{" "}
-                    <strong>React na prática</strong> {"  "}
-                    "Muito bom esse curso gostei"
-                  </p>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
                 </div>
-              </div>
-              <div className="flex p-2">
-                <User
-                  name=""
-                  avatarProps={{
-                    src: "https://i.pravatar.cc/150?u=a04258114e29026702d",
-                  }}
-                />
-                <div>
-                  <p>
-                    <strong>Kevin</strong> comentou no seu curso{" "}
-                    <strong>React na prática</strong> {"  "}
-                    "Muito bom esse curso gostei"
-                  </p>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
                 </div>
               </div>
             </div>
-
-            <div className="flex flex-col w-96 bg-white">
-              <div className="h-12 flex items-center p-2 justify-between ">
-                <h4>Receita</h4>
-                <select className="bg-white ">
-                  <option value="">Hoje</option>
-                  <option value="">Ontem</option>
-                </select>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
               </div>
               <div className="border"></div>
-
-              <AreaChart />
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
             </div>
-
-            <div className="flex flex-col w-64 bg-white">
-              <div className="h-12 flex items-center p-2 justify-between ">
-                <h4>Vista de</h4>
-                <select className="bg-white ">
-                  <option value="">Hoje</option>
-                  <option value="">Ontem</option>
-                </select>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
               </div>
               <div className="border"></div>
-              <BarChart />
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-75 gap-2 bg-white">
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "200px",
+                }}
+              >
+                <Image
+                  fill={true}
+                  objectFit="cover"
+                  src={course1}
+                  alt="course 1"
+                />
+              </div>
+              <div className="px-2">
+                <div className="bg-blue-200 text-blue-600 inline-flex">
+                  <p className="text-sm p-1">Design</p>
+                </div>
+                <h5 className="font-medium mt-2">
+                  Machine Leaning "A-Z": Python Prático e R em dados
+                </h5>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex gap-2 items-center">
+                  <Star size={18} color="#e3cc36" weight="fill" />
+                  <p>5.0</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <User size={18} color="#2564eb" />
+                  <p>300</p>
+                  <p>Estudantes</p>
+                </div>
+              </div>
+              <div className="border"></div>
+              <div className="flex justify-between px-2">
+                <div className="flex   gap-2 items-center text-orange-500">
+                  <p className="font-medium">AOA 24.000</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <DotsThree size={32} />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex gap-6">
-            <div className="flex flex-col w-96 bg-white">
-              <div className="h-12 flex items-center p-2 justify-between ">
-                <h4>Avaliação geral dos curso</h4>
-                <select className="bg-white ">
-                  <option value="">Hoje</option>
-                  <option value="">Ontem</option>
-                </select>
-              </div>
-              <div className="border"></div>
-              <div className="flex p-4 gap-4">
-                <div className="flex  flex-col bg-red-100 p-4 items-center justify-center h-36 gap-2">
-                  <h2 className="text-2xl font-medium">4.6</h2>
-                  <div className="flex">
-                    <Star />
-                    <Star />
-                    <Star />
-                    <Star />
-                    <Star />
-                  </div>
-                  <p>Avaliação geral</p>
-                </div>
-                <div className="flex-1">
-                  <LineChartTest />
-                </div>
-              </div>
-              <div className="p-4">
-                <div className="flex-1">
-                  <div className="flex justify-center gap-2">
-                    <div className="flex">
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                    </div>
-                    <div className="flex flex-1 gap-2">
-                      <ProgressBar value={56} color="yellow" />
-                      <p>56%</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex-1 ">
-                  <div className="flex justify-center gap-2">
-                    <div className="flex">
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" />
-                    </div>
-                    <div className="flex flex-1 gap-2">
-                      <ProgressBar value={37} color="yellow" />
-                      <p>37%</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex-1 ">
-                  <div className="flex justify-center gap-2">
-                    <div className="flex">
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" />
-                      <Star size={12} color="#e3cc36" />
-                    </div>
-                    <div className="flex flex-1 gap-1">
-                      <ProgressBar value={8} color="yellow" />
-                      <p>8%</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex justify-center gap-2">
-                    <div className="flex">
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" />
-                      <Star size={12} color="#e3cc36" />
-                      <Star size={12} color="#e3cc36" />
-                    </div>
-                    <div className="flex flex-1 gap-2">
-                      <ProgressBar value={1} color="yellow" />
-                      <p>1%</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex-1 ">
-                  <div className="flex justify-center gap-2">
-                    <div className="flex">
-                      <Star size={12} color="#e3cc36" weight="fill" />
-                      <Star size={12} color="#e3cc36" />
-                      <Star size={12} color="#e3cc36" />
-                      <Star size={12} color="#e3cc36" />
-                      <Star size={12} color="#e3cc36" />
-                    </div>
-                    <div className="flex flex-1 gap-2">
-                      <ProgressBar value={6} color="yellow" />
-                      <p>6%</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-1 flex-col  bg-white">
-              <div className="h-12 flex items-center p-2 justify-between ">
-                <h4>Visão geral do curso</h4>
-                <select className="bg-white ">
-                  <option value="">Esta semana</option>
-                  <option value="">Ontem</option>
-                </select>
-              </div>
-              <div className="border"></div>
-              <LineChart />
-            </div>
-          </div>
+        </section>
+        <section className="justify-center place-self-center">
+          <Pagination showControls color="warning" total={10} initialPage={1} />
         </section>
       </div>
     </main>

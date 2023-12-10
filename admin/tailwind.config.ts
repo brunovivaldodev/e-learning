@@ -17,6 +17,7 @@ const config: Config = {
       },
       colors: {
         // light mode
+        star: "#e3cc36",
         tremor: {
           brand: {
             faint: "#eff6ff", // blue-50
