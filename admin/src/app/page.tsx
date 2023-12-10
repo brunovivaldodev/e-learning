@@ -1,43 +1,17 @@
-import {
-  Bell,
-  MagnifyingGlass,
-  PlayCircle,
-  Star,
-} from "@phosphor-icons/react/dist/ssr";
-import { CardBody, CardHeader, Image, User } from "@nextui-org/react";
+import { Bell, MagnifyingGlass, Star } from "@phosphor-icons/react/dist/ssr";
+import { User } from "@nextui-org/react";
 import { Card } from "@/components/card";
 import { AreaChart } from "@/components/area-chart";
 import { BarChart } from "@/components/bar-chart";
 import { LineChart } from "@/components/line-chart";
 import { LineChartTest } from "@/components/line-chart-test";
 import { ProgressBar } from "@tremor/react";
+import { Header } from "@/components/header";
 
 export default function Home() {
   return (
     <main className="flex flex-col space-y-8">
-      <nav className="flex flex-1 items-center space-x-96 justify-around bg-white p-2">
-        <div>
-          <h3>Bom dia</h3>
-          <h2>Painel</h2>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="flex items-center w-72 bg-slate-100 p-1">
-            <MagnifyingGlass size={20} />
-            <input
-              className="bg-slate-100 p-2 w-64"
-              type="text"
-              placeholder="Pesquisar"
-            />
-          </div>
-          <Bell size={24} />
-          <User
-            name=""
-            avatarProps={{
-              src: "https://i.pravatar.cc/150?u=a04258114e29026702d",
-            }}
-          />
-        </div>
-      </nav>
+      <Header page="Painel" />
       <div className="mx-28 space-y-8">
         <section className="grid grid-cols-4 gap-4">
           <Card />
