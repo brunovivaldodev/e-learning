@@ -8,13 +8,13 @@ import {
 
 export default function Header(){
   return(
-    <header className="flex flex-col justify-between">
+    <header className="flex flex-col justify-between text-xs">
         <nav className="flex justify-between p-4 bg-gray-800">
           <div>
-            <a className="p-4 text-gray-300">Home</a>
-            <a className="p-4 text-gray-300">Cursos</a>
-            <a className="p-4 text-gray-300">Sobre</a>
-            <a className="p-4 text-gray-300">Torne-se um instrutor</a>
+            <a className="p-4 text-gray-300 hover:text-orange-400">Home</a>
+            <a className="p-4 text-gray-300 hover:text-orange-400">Cursos</a>
+            <a className="p-4 text-gray-300 hover:text-orange-400">Sobre</a>
+            <a className="p-4 text-gray-300 hover:text-orange-400">Torne-se um instrutor</a>
           </div>
           <div>
             <a className="p-4 text-gray-300">USD</a>

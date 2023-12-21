@@ -26,7 +26,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="flex flex-col items-center p-24">
                     <div className="text-8xl text-gray-200 mb-4">2023-2026</div>
-                    <h2 className="text-4xl mb-4"><b>O objetivo é levar o conhecimento para o mundo todo</b></h2>
+                    <h2 className="text-4xl mb-4">O objetivo é levar o conhecimento para o mundo todo</h2>
                     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, doloribus nam dignissimos nostrum temporibus eos alias laborum, illum voluptate commodi repellendus. Ratione culpa voluptate enim mollitia. Consectetur ut beatae neque?</div>
                 </div>
 
@@ -143,7 +143,7 @@ export default function About() {
 
             <div className="flex justify-center space-x-12 mx-28 p-12">
                 <div className="">
-                    <div className="bg-gray-200 mb-4 p-4">
+                    <div className="bg-gray-200 text-center mb-4 w-80 h-32 p-4">
                     O E-Tutor serviu como uma luva. A equipa seleciona cursos novos e atualizados em seu mercado e os disponibiliza aos clientes.
                     </div>
                     <p className="text-center">Bruno Tela</p>
@@ -151,19 +151,19 @@ export default function About() {
                 </div>
 
                 <div className="">
-                    <div className="bg-gray-200 mb-4 p-4">
-                    O E-Tutor serviu como uma luva. A equipa seleciona cursos novos e atualizados em seu mercado e os disponibiliza aos clientes.
+                    <div className="bg-gray-200 text-center mb-4 w-80 h-32 p-4">
+                    O E-Tutor responde às necessidades do negócio de forma ágil. É a melhor solução para nossos funcionários e suas carreiras.
                     </div>
-                    <p className="text-center">Bruno Tela</p>
-                    <p className="text-center text-sm">5º Ano, Engenharia Informática</p>
+                    <p className="text-center">Cleusia dos Anjos</p>
+                    <p className="text-center text-sm">1º Ano, Engenharia Informática</p>
                 </div>
 
                 <div className="">
-                    <div className="bg-gray-200 mb-4 p-4">
-                    O E-Tutor serviu como uma luva. A equipa seleciona cursos novos e atualizados em seu mercado e os disponibiliza aos clientes.
+                    <div className="bg-gray-200 text-center mb-4 w-80 h-32 p-4">
+                    No total, foi um grande sucesso, eu recebia e-mails sobre como era um recurso fantástico.
                     </div>
-                    <p className="text-center">Bruno Tela</p>
-                    <p className="text-center text-sm">5º Ano, Engenharia Informática</p>
+                    <p className="text-center">Romeno do Rosário</p>
+                    <p className="text-center text-sm">3º Ano, Engenharia Civil</p>
                 </div>
             </div>
             
