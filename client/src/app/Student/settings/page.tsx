@@ -1,7 +1,8 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Image from "next/image";
 import pfp from "../../../../public/pfp.webp";
-import {  Eye, EyeSlash } from "@phosphor-icons/react/dist/ssr";
+import { Eye, EyeSlash } from "@phosphor-icons/react/dist/ssr";
 import Button from "../../components/Button"
 import Button2 from "../../components/Button2"
 import Header from "../../components/Header"
@@ -11,8 +12,23 @@ import ProfileInfo from "../../components/ProfileInfo"
 
 
 export default function Student() {
+
+    const [passwordVisible, setPasswordVisible] = useState(false);
+    const [passwordVisible2, setPasswordVisible2] = useState(false);
+    const [passwordVisible3, setPasswordVisible3] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
+
+    const togglePasswordVisibility2 = () => {
+        setPasswordVisible2(!passwordVisible2);
+    };
     
-    
+    const togglePasswordVisibility3 = () => {
+        setPasswordVisible3(!passwordVisible3);
+    };
+
     return (
 
         <div >
@@ -39,7 +55,7 @@ export default function Student() {
 
                         </div>
 
-                        <div className="flex flex-col w-3/4 ">
+                        <div className="flex flex-col w-3/4">
 
                             <div className="flex flex-col w-full ml-5">
 
@@ -47,33 +63,31 @@ export default function Student() {
 
                                 <div className="flex">
                                     <div className="flex w-1/2 mr-3 border border-gray-200 p-2 mt-1 items-center">
-                                        <input className="text-xs w-full" type="text" name="" id="" placeholder="Primeiro nome" />
+                                        <input className="text-xs w-full" type="text" name="" id="first-name" placeholder="Primeiro nome" />
                                     </div>
 
                                     <div className="flex w-1/2 border border-gray-200 p-2 mt-1 items-center">
-                                        <input className="text-xs w-full" type="text" name="" id="" placeholder="Último nome" />
+                                        <input className="text-xs w-full" type="text" name="last-name" id="" placeholder="Último nome" />
                                     </div>
                                 </div>
 
                                 <p className="text-xs mt-3">Nome de Utilizador</p>
 
                                 <div className="flex w-full border border-gray-200 p-2 mt-1 items-center">
-                                    <input className="text-xs w-full" type="text" name="" id="" placeholder="Escreva o seu nome de utilizador" />
+                                    <input className="text-xs w-full" type="text" name="" id="username" placeholder="Escreva o seu nome de utilizador" />
                                 </div>
 
                                 <p className="text-xs mt-3">Email</p>
 
                                 <div className="flex w-full border border-gray-200 p-2 mt-1 items-center">
-                                    <input className="text-xs w-full" type="text" name="" id="" placeholder="Endereço de email" />
+                                    <input className="text-xs w-full" type="text" name="" id="email" placeholder="Endereço de email" />
                                 </div>
 
                                 <p className="text-xs mt-3">Título</p>
 
                                 <div className="flex w-full border border-gray-200 p-2 mt-1 items-center">
-                                    <textarea placeholder="O seu título, profissão ou pequena biografia" className="text-xs w-full resize-none" name="" id=""></textarea>
+                                    <textarea placeholder="O seu título, profissão ou pequena biografia" className="text-xs w-full resize-none" name="" id="titulo"></textarea>
                                 </div>
-
-
 
                             </div>
 
@@ -96,13 +110,14 @@ export default function Student() {
                         <div className="flex w-full border border-gray-200 p-2 mt-1 items-center">
                             <input
                                 className="text-xs w-full"
-                                type="password"
-                                id="password"
-                                name="password"
+                                type={passwordVisible ? 'text' : 'password'}
                                 placeholder="Password"
                             />
-                            <EyeSlash size={15}></EyeSlash>
-                            
+                            {passwordVisible ? (
+                                <Eye size={15} onClick={togglePasswordVisibility} />
+                            ) : (
+                                <EyeSlash size={15} onClick={togglePasswordVisibility} />
+                            )}
                         </div>
 
                         <p className="text-xs mt-4 text-gray-900">Nova Password</p>
@@ -110,13 +125,14 @@ export default function Student() {
                         <div className="flex w-full border border-gray-200 p-2 mt-1 items-center">
                             <input
                                 className="text-xs w-full"
-                                type="password"
-                                id="password"
-                                name="password"
-                                placeholder="Password"
+                                type={passwordVisible2 ? 'text' : 'password'}
+                                placeholder="Nova Password"
                             />
-                            <EyeSlash size={15}></EyeSlash>
-                            
+                            {passwordVisible2 ? (
+                                <Eye size={15} onClick={togglePasswordVisibility2} />
+                            ) : (
+                                <EyeSlash size={15} onClick={togglePasswordVisibility2} />
+                            )}
                         </div>
 
                         <p className="text-xs mt-4">Confirmar Password</p>
@@ -124,16 +140,15 @@ export default function Student() {
                         <div className="flex w-full border border-gray-200 p-2 mt-1 items-center">
                             <input
                                 className="text-xs w-full"
-                                type="password"
-                                id="password"
-                                name="password"
-                                placeholder="Confirmar nova password"
+                                type={passwordVisible3 ? 'text' : 'password'}
+                                placeholder="Confirmar Password"
                             />
-                            <EyeSlash size={15}></EyeSlash>
-                            
+                            {passwordVisible3 ? (
+                                <Eye size={15} onClick={togglePasswordVisibility3} />
+                            ) : (
+                                <EyeSlash size={15} onClick={togglePasswordVisibility3} />
+                            )}
                         </div>
-
-
 
                         <div className="w-2/5 mt-4">
                             <a className="flex text-xs p-3 text-white bg-orange-500 items-center justify-center" href="">
@@ -141,14 +156,9 @@ export default function Student() {
                             </a>
                         </div>
 
-
                     </div>
 
-
-
-
                 </div>
-
 
             </div>
 

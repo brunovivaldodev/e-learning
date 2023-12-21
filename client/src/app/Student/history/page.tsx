@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import Image from "next/image";
 import pfp from "../../../../public/pfp.webp";
@@ -14,7 +16,6 @@ import ProfileInfo from "../../components/ProfileInfo"
 
 
 export default function Student() {
-
 
     return (
 

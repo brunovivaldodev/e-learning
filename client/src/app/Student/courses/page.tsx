@@ -1,3 +1,4 @@
+'use client'
 import { Bell } from "@phosphor-icons/react/dist/ssr/Bell";
 import Image from "next/image";
 import logo from "../../../public/logo.svg";
@@ -16,7 +17,7 @@ import CursoNovo from "../../components/CursoNovo"
 export default function Student() {
     return (
 
-        <div >
+        <div>
 
             <div className="flex flex-col bg-white justify-center items-center">
 

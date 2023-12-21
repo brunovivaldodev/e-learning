@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import pfp from "../../../public/pfp.webp";
 import { Star, MagnifyingGlass, ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
