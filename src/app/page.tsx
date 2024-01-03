@@ -25,10 +25,11 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <Header/>
+      <hr />
       <div>
-        <section className="mx-8">
+        <section className="mx-3">
           <div className="flex justify-center gap-8">
-            <div className="flex flex-col gap-8 justify-center">
+            <div className="flex flex-col gap-8 justify-center mx-5">
               <h1 className="font-bold text-4xl w-[560px]">
                 Aprenda com o isptec em qualquer lugar e momento
               </h1>
@@ -37,7 +38,7 @@ export default function Home() {
                 online e aprender com os especialistas a qualquer hora e em
                 qualquer lugar
               </h4>
-              <div className="flex bg-orange-500 h-12 w-24 items-center justify-center">
+              <div className="flex bg-laranja h-12 w-24 items-center justify-center">
                 <a className="text-sm text-white semi-bold text-center">
                   Criar Conta
                 </a>

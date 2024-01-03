@@ -15,6 +15,7 @@ const config: Config = {
       },
       backgroundColor: {
         'peach': '#FFEEE8',
+        'laranja': '#FF6636',
       },
     },
   },

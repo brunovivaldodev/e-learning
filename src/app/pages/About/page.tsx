@@ -17,12 +17,7 @@ export default function About() {
     return(
         <div>
             <Header/>
-            <div className="w-full bg-gray-100 flex p-10 justify-center items-center">
-                <div className="space-y-2">
-                    <h3 className="text-2xl text-center">Sobre</h3>
-                    <div className="text-sm text-center">Home / <b>Sobre</b></div>
-                </div>
-            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="flex flex-col items-center p-24">
                     <div className="text-8xl text-gray-200 mb-4">2023-2026</div>
