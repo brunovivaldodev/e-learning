@@ -1,0 +1,133 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id          String      @id()
+  name        String
+  email       String      @unique
+  password    String
+  description String?
+  avatarUrl   String?
+  title       String?
+  comments    Comments[]
+  purchases   Purchases[]
+  created_at  DateTime
+  updated_at  DateTime
+
+  @@map("students")
+}
+
+model Admin {
+  id         String   @id()
+  name       String
+  email      String   @unique
+  password   String
+  created_at DateTime
+  updated_at DateTime
+
+  @@map("admins")
+}
+
+model Instructor {
+  id              String    @id()
+  name            String
+  email           String
+  password        String
+  description     String
+  avatarUrl       String?
+  title           String
+  decision        String
+  social_profiles Json
+  created_at      DateTime
+  updated_at      DateTime
+  Courses         Courses[]
+
+  @@map("instructors")
+}
+
+model Courses {
+  id              String           @id()
+  title           String
+  subtitle        String
+  categories      String
+  topic           String
+  language        String
+  level           String
+  duration        String
+  thumbnail       String
+  trailer         String
+  description     String
+  price           Float
+  decision        String
+  instructor_id   String
+  instructor      Instructor       @relation(fields: [instructor_id], references: [id])
+  lessons         String[]
+  target_Audience String[]
+  requirements    String[]
+  Course_Section  Course_Section[]
+  purchases       Purchases[]
+  created_at      DateTime
+  updated_at      DateTime
+
+  @@map("courses")
+}
+
+model Course_Section {
+  id         String    @id()
+  name       String
+  course_id  String
+  course     Courses   @relation(fields: [course_id], references: [id])
+  lecture    Lecture[]
+  created_at DateTime
+  updated_at DateTime
+
+  @@map("courses_sections")
+}
+
+model Lecture {
+  id                String         @id()
+  course_section_id String
+  course_Section    Course_Section @relation(fields: [course_section_id], references: [id])
+  name              String
+  type              String
+  url               String
+  comments          Comments[]
+  created_at        DateTime
+  updated_at        DateTime
+
+  @@map("lectures")
+}
+
+model Comments {
+  id            String   @id()
+  comment       String
+  student_id    String
+  student       Student  @relation(fields: [student_id], references: [id])
+  attachment_id String
+  lecture       Lecture  @relation(fields: [attachment_id], references: [id])
+  created_at    DateTime
+  updated_at    DateTime
+
+  @@map("comments")
+}
+
+model Purchases {
+  id         String   @id()
+  student_id String
+  student    Student  @relation(fields: [student_id], references: [id])
+  course_id  String
+  course     Courses  @relation(fields: [course_id], references: [id])
+  created_at DateTime
+  updated_at DateTime
+
+  @@map("purchases")
+}
