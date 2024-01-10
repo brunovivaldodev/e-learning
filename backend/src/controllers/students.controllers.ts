@@ -1,9 +1,11 @@
 import { DatabaseStudent } from "../database";
 import AppError from "../errors/appError";
-import { CreateStudentDTO, LoginStudentDTO, EditStudentDTO } from "./dtos";
+import {} from "./dtos";
 import { hash, compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import { config } from "../config/auth";
+import { CreateStudentDTO, EditStudentDTO } from "./dtos/students";
+import { LoginStudentDTO } from "./dtos/students/loginStudent.dto";
 
 class StudentControllers {
   readonly databaseStudent = new DatabaseStudent();

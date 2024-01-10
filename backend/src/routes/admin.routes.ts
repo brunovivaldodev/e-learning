@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { AdminControllers } from "../controllers";
+import { ensureAdminAuthenticated } from "./middlewares";
 
 const router = Router();
 
@@ -35,5 +36,36 @@ router.get("/:id", async (request, response) => {
   const admin = await adminController.findById(id);
   return response.json({ admin });
 });
+
+router.post(
+  "/course/:courseId",
+  ensureAdminAuthenticated,
+
+  async (request, response) => {
+    const { courseId } = request.params;
+    const { decision } = request.body;
+
+    const course = await adminController.aproveCourse(courseId, decision);
+
+    return response.json(course);
+  }
+);
+
+router.post(
+  "/instructor/:instructorId",
+  ensureAdminAuthenticated,
+
+  async (request, response) => {
+    const { instructorId } = request.params;
+    const { decision } = request.body;
+
+    const instructor = await adminController.aproveInstructor(
+      instructorId,
+      decision
+    );
+
+    return response.json(instructor);
+  }
+);
 
 export default router;

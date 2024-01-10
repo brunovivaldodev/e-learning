@@ -36,7 +36,7 @@ class InstructorControllers {
     const instructor = await this.databaseInstructor.create({
       email,
       name,
-      decision: Decision.Pending,
+      decision: Decision.Values.Pendente,
       social_profiles,
       title,
       password: hashedPassword,
