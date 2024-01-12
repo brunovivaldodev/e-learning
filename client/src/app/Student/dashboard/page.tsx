@@ -5,6 +5,8 @@ import Tab from "../../components/Tab"
 import ProfileInfo from "../../components/ProfileInfo"
 import CursoNovo from "../../components/CursoNovo"
 import CursoComecado from "../../components/CursoComecado"
+import Footer from '@/app/components/Footer';
+import Header from '@/app/components/Header';
 
 
 export default function Student() {
@@ -37,6 +39,9 @@ export default function Student() {
     };
 
     return (
+        <>
+
+        <Header></Header>
 
         <div >
 
@@ -134,5 +139,9 @@ export default function Student() {
             </div>
 
         </div>
+
+        <Footer></Footer>
+
+        </>
     );
 }

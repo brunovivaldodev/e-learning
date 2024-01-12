@@ -18,6 +18,7 @@ export default function Student() {
     return (
 
         <div>
+            <Header aux=''/>
 
             <div className="flex flex-col bg-white justify-center items-center">
 

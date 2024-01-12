@@ -1,11 +1,11 @@
-import Header from "../../components/Header";
-import inst from "../../../../public/aboutI.png";
+import Header from "../components/Header";
+import inst from "../../../public/aboutI.png";
 import Image from "next/image";
-import google from "../../../../public/google.png";
-import aboutR from "../../../../public/aboutR.png";
-import aboutA from "../../../../public/aboutA.png";
-import total from "../../../../public/total.png";
-import unitel from "../../../../public/unitel.png";
+import google from "../../../public/google.png";
+import aboutR from "../../../public/aboutR.png";
+import aboutA from "../../../public/aboutA.png";
+import total from "../../../public/total.png";
+import unitel from "../../../public/unitel.png";
 import Footer from "@/app/components/Footer";
 
 import { AiOutlineTeam, AiOutlineFileDone } from "react-icons/ai";
@@ -108,7 +108,7 @@ export default function About() {
             </section>
 
             <div className="grid grid-cols-1 md:grid-cols-2 w-full bg-peach">
-                <div className="">
+                <div className="ml-20">
                     <Image height={365} src={aboutR} alt="Instrutores"/>
                 </div>
 
