@@ -5,16 +5,17 @@ import { Heart } from "@phosphor-icons/react/dist/ssr/Heart";
 import {
   ShoppingCart,
 } from "@phosphor-icons/react/dist/ssr";
+import Link from "next/link";
 
 export default function Header(){
   return(
     <header className="flex flex-col justify-between text-xs">
         <nav className="flex justify-between p-4 bg-gray-800">
           <div>
-            <a className="p-4 text-gray-300 hover:text-orange-400">Home</a>
-            <a className="p-4 text-gray-300 hover:text-orange-400">Cursos</a>
-            <a className="p-4 text-gray-300 hover:text-orange-400">Sobre</a>
-            <a className="p-4 text-gray-300 hover:text-orange-400">Torne-se um instrutor</a>
+            <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/"}>Home</Link>
+            <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/CourseList"}>Cursos</Link>
+            <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/About"}>Sobre</Link>
+            <Link className="p-4 text-gray-300 hover:text-orange-400" href={"BecomeInstructor"}>Torne-se um instrutor</Link>
           </div>
           <div>
             <a className="p-4 text-gray-300">USD</a>
@@ -47,14 +48,14 @@ export default function Header(){
             </div>
             <div className="flex gap-2">
               <div className="flex bg-orange-300 h-12 w-24 justify-center items-center">
-                <a className="text-sm font-semibold text-orange-500 text-center">
+                <Link className="text-sm font-semibold text-orange-500 text-center" href='/SignUp'>
                   Criar Conta
-                </a>
+                </Link>
               </div>
               <div className="flex bg-orange-500 h-12 w-24 justify-center items-center">
-                <a className="text-sm text-white semi-bold text-center">
+                <Link className="text-sm text-white semi-bold text-center" href='/SignIn'>
                   Entrar
-                </a>
+                </Link>
               </div>
             </div>
           </div>

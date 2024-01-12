@@ -18,6 +18,8 @@ export default function Student() {
 
     return (
 
+        <>
+        <Header></Header>
         <div >
 
             <div className="flex flex-col bg-white justify-center items-center">
@@ -65,7 +67,7 @@ export default function Student() {
                                     </div>
                                 </div>
                                 <div className=''>
-                                    <p className='text-xs text-gray-700'>just now</p>
+                                    <p className='text-xs text-gray-700'>Agora mesmo</p>
                                 </div>
                             </div>
 
@@ -99,7 +101,7 @@ export default function Student() {
                                     </div>
                                 </div>
                                 <div className=''>
-                                    <p className='text-xs text-gray-700'>just now</p>
+                                    <p className='text-xs text-gray-700'>Agora mesmo</p>
                                 </div>
                             </div>
 
@@ -154,7 +156,7 @@ export default function Student() {
                                 </div>
 
                                 <div className='bg-orange-100 p-2 text-xs m-1'>
-                                    <p>Hello and thanks for signing up to the course. If you have any questions about the course or Adobe XD, feel free to get in touch and I'll be happy to help 😀</p>
+                                    <p>Oi e obrigado por te inscreveres no curso. Se tiveres alguma dúvida sobre o curso ou sobre o Adobe XD, fique à vontade para entrar em contato</p>
                                 </div>
                             </div>
 
@@ -165,7 +167,7 @@ export default function Student() {
                                 </div>
 
                                 <div className='bg-orange-500 p-2 text-xs w-2/3 m-1'>
-                                    <p className='text-white'>Hello, Good Evening.</p>
+                                    <p className='text-white'>Boa tarde, professor.</p>
                                 </div>
                             </div>
 
@@ -196,5 +198,6 @@ export default function Student() {
             <Footer></Footer>
 
         </div>
+        </>
     );
 }

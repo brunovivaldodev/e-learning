@@ -18,7 +18,7 @@ export default function SignUp() {
                     </image>
                 </div>
                 <div className="space-x-2">
-                    <Link className="text-gray-500 outline-none text-sm" href="/pages/SignIn">Já tenho uma conta</Link> 
+                    <Link className="text-gray-500 outline-none text-sm" href="/SignIn">Já tenho uma conta</Link> 
                     <button className="bg-peach text-orange-500 p-3 rounded-lg text-sm">Fazer login</button>
                 </div>
             </header>

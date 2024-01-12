@@ -17,7 +17,7 @@ export default function SignIn() {
                     </image>
                 </div>
                 <div className="space-x-2">
-                    <Link className="text-gray-500 outline-none text-sm" href="/pages/SignUp">Não tem conta?</Link> 
+                    <Link className="text-gray-500 outline-none text-sm" href="/SignUp">Não tem conta?</Link> 
                     <button className="bg-peach text-orange-500 p-3 rounded-lg text-sm">Criar Conta</button>
                 </div>
             </header>
@@ -54,7 +54,7 @@ export default function SignIn() {
                                 id="checkbox"
                                 className="mr-2"
                             /> Lembrar-me</p>
-                            <button className="text-white text-sm bg-laranja p-2 rounded-lg flex justify-between items-center gap-2 px-10">Entrar <GoArrowRight/></button>
+                            <button className="text-white text-sm bg-laranja p-2 rounded-lg flex justify-between items-center gap-2 px-10"><Link href={'/Student/dashboard'}>Entrar</Link> <GoArrowRight/></button>
                         </div>
                         
                         <div className="flex justify-between text-xs mt-10">
