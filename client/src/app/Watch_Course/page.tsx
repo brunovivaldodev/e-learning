@@ -113,20 +113,20 @@ export default function Watch_Course() {
                     </div>
                     
                     <div className="flex space-x-10 text-gray-700">
-                        <ul className="border-b-2 border-orange-500 pb-3 p-3 text-center">Descrição</ul>
-                        <ul className="border-b-2 border-orange-500 pb-3 p-3 text-center">Notas da aula</ul>
-                        <ul className="border-b-2 border-orange-500 pb-3 p-3 text-center">Anexa arquivo</ul>
-                        <ul className="border-b-2 border-orange-500 pb-3 p-3 text-center">Comentários</ul>
+                        <a className="hover:border-b-2 hover:border-orange-500 pb-3 p-3 text-center" href="#Descrição">Descrição</a>
+                        <a className="hover:border-b-2 hover:border-orange-500 pb-3 p-3 text-center" href="#Notas">Notas da aula</a>
+                        <a className="hover:border-b-2 hover:border-orange-500 pb-3 p-3 text-center" href="#File">Anexa arquivo</a>
+                        <a className="hover:border-b-2 hover:border-orange-500 pb-3 p-3 text-center" href="#Comment">Comentários</a>
                     </div>
 
                     <div className="mt-10 space-y-4">
-                        <h2 className="text-2xl font-semibold">Descrição das palestras</h2>
+                        <h2 className="text-2xl font-semibold" id="Descrição">Descrição das palestras</h2>
                         <p className="text-sm text-gray-600">We cover everything you need to build your first website. From creating your first page through to uploading your website to the internet. We’ll use the world’s most popular (and free) web design tool called Visual Studio Code. There are exercise files you can download and then work along with me. At the end of each video I have a downloadable version of where we are in the process so that you can compare your project with mine. This will enable you to see easily where you might have a problem. We will delve into all the good stuff such as how to create your very own mobile burger menu from scratch learning some basic JavaScript and jQuery.</p>
                     </div>
 
                     <div className="mt-10 space-y-4">
                         <div className="flex justify-between items-center">
-                            <h2 className="text-2xl font-semibold">Notas da aula </h2>
+                            <h2 className="text-2xl font-semibold" id="Notas">Notas da aula </h2>
                             <button className="bg-peach p-3 text-sm text-orange-500 flex gap-2 items-center"><BsDownload color={'#FF6636'} /> <p>Baixar notas</p></button>
                         </div>
                         <p className="text-gray-600 text-sm">Nullam non quam a lectus finibus varius nec a orci. Aliquam efficitur sem cursus elit efficitur      lacinia
@@ -140,7 +140,7 @@ export default function Watch_Course() {
                     </div>
 
                     <div className="space-y-4 mt-10">
-                        <h2 className="text-2xl font-semibold">Anexar arquivos</h2>
+                        <h2 className="text-2xl font-semibold" id="File">Anexar arquivos</h2>
                         <div className="mt-5 p-4 bg-gray-100 flex justify-between items-center text-sm">
                             <div className="flex items-center space-x-4"><HiOutlineDocumentText color={'#FF6636'} size={35}/>
                                 <div>
@@ -155,10 +155,10 @@ export default function Watch_Course() {
 
                     <div>
                         <div className="flex mt-10 ml-5 items-center mb-5">
-                            <h3 className="text-xl font-semibold">Comentários</h3>
+                            <h3 className="text-xl font-semibold" id="Comment">Comentários</h3>
                             <h3 className="text-xl ml-2"> (154)</h3>
                         </div>
-                        <div className="flex space-x-2 mb-5">
+                        <div className="flex space-x-2 mb-4">
                             <IoPersonCircleOutline size={35}/>
                             <div>
                                 <div className="flex gap-2 items-center mb-1">
