@@ -142,7 +142,7 @@ export default function Courses_List_Filter() {
 
                             <div className="flex w-3/4 m-1 border border-gray-200 p-2 items-center">
                                 <MagnifyingGlass size={15} />
-                                <input className="text-xs w-full" type="text" name="" id="" placeholder=" Procura nos cursos..." />
+                                <input className="text-xs w-full outline-none" type="text" name="" id="" placeholder=" Procura nos cursos..." />
                             </div>
                         </div>
 

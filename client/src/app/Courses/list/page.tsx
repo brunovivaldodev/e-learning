@@ -12,6 +12,7 @@ export default function Courses_List() {
     return (
 
         <div>
+            <Header></Header>
 
             <div className="bg-white justify-center">
 

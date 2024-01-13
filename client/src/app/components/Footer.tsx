@@ -7,6 +7,7 @@ import {
   TwitterLogo,
   YoutubeLogo,
 } from "@phosphor-icons/react/dist/ssr";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -83,8 +84,8 @@ export default function Footer() {
               <div className="w-56">
                 <h2 className="text-white">Links Rápidos</h2>
                 <div className="flex flex-col gap-2">
-                  <a href="">Sobre</a>
-                  <a href="">Se torne um instructor -{">"}</a>
+                  <Link href="/About" className="hover:text-orange-500">Sobre</Link>
+                  <Link href="/BecomeInstructor" className="hover:text-orange-500">Se torne um instructor -{">"}</Link>
                   <a href="">Contactos</a>
                   <a href="">Carreira</a>
                 </div>
