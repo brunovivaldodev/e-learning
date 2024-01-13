@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { PlayCircle, Trophy, CheckSquareOffset, Users, ArrowRight, ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 import Tab from "../components/Tab";
+import Footer from "../components/Footer";
 import ProfileInfo from "../components/ProfileInfo";
 import Dashboard from "../Student/components/Dashboard";
 import Cursos from "../Student/components/Cursos";
@@ -59,6 +60,8 @@ export default function Student() {
                 </div>
 
             </div>
+
+            <Footer></Footer>
 
         </div>
     );
