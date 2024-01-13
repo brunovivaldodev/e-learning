@@ -11,7 +11,7 @@ export default function Curso() {
             <div className='m-1.5 border border-gray-100'>
                 <Image className="w-full p-0" src={course} alt="course" />
 
-                <div className='flex justify-between p-2 items-center justify-center'>
+                <div className='flex justify-between p-2 items-center'>
                     <p className='text-xs bg-red-100 p-1'>Programação</p>
                     <p className='text-sm text-orange-500 font-bold'>24000 AKZ</p>
                 </div>

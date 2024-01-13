@@ -153,8 +153,8 @@ export default function Watch_Course() {
                         </div>
                     </div>
 
-                    <div>
-                        <div className="flex mt-10 ml-5 items-center mb-5">
+                    <div className="mt-10 ml-5">
+                        <div className="flex items-center mb-5">
                             <h3 className="text-xl font-semibold" id="Comment">Comentários</h3>
                             <h3 className="text-xl ml-2"> (154)</h3>
                         </div>
@@ -165,7 +165,7 @@ export default function Watch_Course() {
                                     <p className="text-sm">Malcolm Silva</p>
                                     <p className="text-[10px] text-gray-500">Há uma semana</p>
                                 </div>
-                                <p className="text-sm text-gray-600 mb-2">A fulana ficou grávida</p>
+                                <p className="text-sm text-gray-600 mb-2">Gostei da aula, bem explicita</p>
                                 <div className="flex gap-2 text-gray-600 items-center">
                                     <IoChatbubblesOutline size={18}/>
                                     <p className="text-xs">RESPONDER</p>
