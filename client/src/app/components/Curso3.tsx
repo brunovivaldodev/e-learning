@@ -16,7 +16,7 @@ export default function Curso3() {
                     <p className='text-sm text-orange-500 font-bold'>24000 AKZ</p>
                 </div>
 
-                <p className='text-sm p-2 font-bold'>Estrutura de Dados e Algoritmos (2021)</p>
+                <p className='text-xs p-2 font-bold'>Estrutura de Dados e Algoritmos (2021)</p>
 
                 <div className='flex p-3 justify-between border border-gray-100'>
 

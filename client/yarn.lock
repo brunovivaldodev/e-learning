@@ -894,7 +894,7 @@
     "@nextui-org/shared-utils" "2.0.4"
     "@nextui-org/system-rsc" "2.0.11"
 
-"@nextui-org/switch@2.0.25":
+"@nextui-org/switch@^2.0.25", "@nextui-org/switch@2.0.25":
   "integrity" "sha512-U7g68eReMSkgG0bBOSdzRLK+npv422YK6WYHpYOSkEBDqGwQ7LCeMRQreT/KxN0QFxIKmafebdLHAbuKc/X+5Q=="
   "resolved" "https://registry.npmjs.org/@nextui-org/switch/-/switch-2.0.25.tgz"
   "version" "2.0.25"
@@ -2519,7 +2519,7 @@
   "resolved" "https://registry.npmjs.org/fraction.js/-/fraction.js-4.3.7.tgz"
   "version" "4.3.7"
 
-"framer-motion@>=4.0.0":
+"framer-motion@^10.16.16", "framer-motion@>=4.0.0":
   "integrity" "sha512-je6j91rd7NmUX7L1XHouwJ4v3R+SO4umso2LUcgOct3rHZ0PajZ80ETYZTajzEXEl9DlKyzjyt4AvGQ+lrebOw=="
   "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-10.16.16.tgz"
   "version" "10.16.16"
