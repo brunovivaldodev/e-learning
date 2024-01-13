@@ -10,7 +10,7 @@ import History from "../Student/components/History";
 import Instrutores from "../Student/components/Instrutores";
 import Wishlist from "../Student/components/Wishlist";
 import Settings from "../Student/components/Settings";
-import Header2 from "../components/Header2";
+import Header2 from "../components/Header";
 
 export default function Student() {
 

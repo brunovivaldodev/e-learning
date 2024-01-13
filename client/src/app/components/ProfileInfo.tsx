@@ -10,7 +10,7 @@ interface ProfileInfoProps {
 
 export default function ProfileInfo({pfp, name, description}:ProfileInfoProps) {
     return (
-        <div className="flex bg-orange-100 justify-center w-full">
+        <div className="flex justify-center w-full" style={{backgroundColor:"#FFEEE8"}}>
 
             <div className="flex w-3/4 mt-10 p-5 items-center bg-white border border-orange-200 p-5">
 

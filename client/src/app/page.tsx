@@ -21,7 +21,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      <Header />
+      <Header avatarUrl="none"/>
       <div>
         <section className="mx-3">
           <div className="flex justify-center gap-8">

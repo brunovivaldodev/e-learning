@@ -22,7 +22,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 export default function BecomeI() {
     return(
         <>
-            <Header/>
+            <Header avatarUrl="none"/>
 
             <hr />
 

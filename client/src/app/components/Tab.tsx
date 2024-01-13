@@ -27,7 +27,7 @@ export default function Tab({ activeTab, onTabClick }: TabProps) {
                 <span style={{ cursor: 'pointer' }} className='p-3 ml-5 pr-5'>Instrutores</span>
             </div>
             <div className={`p-3 pr-7 pl-7 ${activeTab === 'Wishlist' ? 'border-b p-3 border-b-4 border-orange-500' : ''}`} onClick={() => handleTabClick('Wishlist')}>
-                <span style={{ cursor: 'pointer' }} className='p-3 ml-5 pr-5'>Wishllist</span>
+                <span style={{ cursor: 'pointer' }} className='p-3 ml-5 pr-5'>Wishlist</span>
             </div>
             <div className={`p-3 pr-7 pl-7 ${activeTab === 'Histórico' ? 'border-b p-3 border-b-4 border-orange-500' : ''}`} onClick={() => handleTabClick('Histórico')}>
                 <span style={{ cursor: 'pointer' }} className='p-3 ml-5 pr-5'>Histórico</span>
