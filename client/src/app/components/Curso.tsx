@@ -2,6 +2,8 @@ import React from 'react';
 import Image from "next/image";
 import { Star, User } from "@phosphor-icons/react/dist/ssr";
 import course from "../../../public/course4.png";
+import { IoStar } from 'react-icons/io5';
+import { GoPerson } from 'react-icons/go';
 
 export default function Curso() {
     return (
@@ -21,13 +23,12 @@ export default function Curso() {
                 <div className='flex p-3 justify-between border border-gray-100'>
 
                     <div className='flex items-center'>
-                        <Star size={15} color="#FD8E1F" weight="fill"></Star>
+                        <IoStar size={14} color='#FD8E1F' />
                         <p className='text-xs pl-1 text-gray-700'>4.7</p>
                     </div>
 
                     <div className='flex items-center'>
-                        <User size={15} color="#564FFD"></User>
-                        <span className='text-xs pl-1 text-gray-700'>451,444</span>
+                        <GoPerson size={14} color='#564FFD' />                        <span className='text-xs pl-1 text-gray-700'>451,444</span>
                         <span className='text-xs pl-1 text-gray-500'>students</span>
                     </div>
 

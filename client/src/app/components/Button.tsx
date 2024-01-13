@@ -8,8 +8,8 @@ interface AulaButtonProps {
 
 const Button: React.FC<AulaButtonProps> = ({ buttonText }) => {
   return (
-    <div className="p-3 w-full">
-      <a className="flex text-xs p-1.5 text-white bg-orange-500 items-center justify-center" href="">
+    <div className="p-2 w-full">
+      <a className="flex p-1.5 items-center justify-center" style={{ fontSize: '12px', fontWeight: 500, color: "white", backgroundColor:"#FF6636" }}  href="">
         {buttonText}
       </a>
     </div>

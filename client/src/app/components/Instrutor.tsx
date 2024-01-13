@@ -1,38 +1,47 @@
 import Image from "next/image";
 import pfp from "../../../public/pfp.webp";
 import { Star, MagnifyingGlass, ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
-import instrutor1 from "../../../public/inscrutor1.png";
-import instrutor2 from "../../../public/inscrutor2.png";
-import instrutor3 from "../../../public/inscrutor3.png";
-import Button from "../components/Button"
 import Button2 from "../components/Button2"
+import { IoStar } from 'react-icons/io5';
+import { GoPerson } from 'react-icons/go';
+
+interface props {
+    avatarUrl: string;
+    name: string;
+    description: string;
+    stars: number;
+    students: number;
+}
 
 
-export default function Instrutor() {
+export default function Instrutor({ avatarUrl, name, description, stars, students }: props) {
     return (
-        <div className="flex w-1/4 flex-wrap mb-3">
 
-            <div className="flex flex-col border border-grey-200">
+        <div className="flex flex-col w-1/4 mb-3">
 
-                <Image className="w-full" src={instrutor1} alt="course" />
+            <div className="flex flex-col m-1 border border-gray-200">
 
-                <div className="flex  flex-col items-center justify-center">
-                    <p className="p-1 text-sm font-bold text-gray-900">Sediangani Sofrimento</p>
-                    <p className="text-gray-500 text-xs">Desenvolvedor Web</p>
+
+                <Image className="w-full" src={avatarUrl} width={250} height={300} alt="course" />
+
+                <div className="flex flex-col items-center justify-center">
+                    <p className="p-1" style={{ fontSize: '15px' }}>{name}</p>
+                    <p className="text-gray-500 mb-1" style={{ fontSize: '10px' }}>{description}</p>
                 </div>
 
-                <div className="border mt-1 border-gray-300">
+                <div className="border-t">
 
-                    <div className="flex flex-row pr-2 pl-2 justify-between">
+                    <div className="flex flex-row p-2 justify-between">
 
                         <div className="flex items-center justify-center">
-                            <Star size={15} color="#FD8E1F" weight="fill" />
-                            <p className="text-gray-700 p-2 text-xs">5.0</p>
+                        <IoStar size={14} color='#FD8E1F' />
+                            <p className="text-gray-700 ml-1 text-xs" style={{ fontSize: '10px' }}>{stars}</p>
                         </div>
 
                         <div className="flex items-center justify-center">
-                            <p className="text-gray-700 pr-1 text-xs">20,000 </p>
-                            <p className="text-gray-500 text-xs"> estudantes</p>
+                        <GoPerson size={14} color='#564FFD'/>
+                            <p className="text-gray-700 pr-1 text-xs" style={{ fontSize: '10px' }}>{students} </p>
+                            <p className="text-gray-500 text-xs" style={{ fontSize: '10px' }}> estudantes</p>
                         </div>
 
                     </div>
@@ -42,6 +51,7 @@ export default function Instrutor() {
                 </div>
 
             </div>
+
         </div>
     );
 }
