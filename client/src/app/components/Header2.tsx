@@ -7,11 +7,11 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 
 interface HeaderProps {
-  pfp: string;
+  avatarUrl: string;
 
 }
 
-export default function Header({ pfp }: HeaderProps) {
+export default function Header({ avatarUrl }: HeaderProps) {
   return (
 
     <header>
@@ -62,7 +62,7 @@ export default function Header({ pfp }: HeaderProps) {
           <Bell size={18} className="mr-2" />
           <Heart size={18} className="mr-2" />
           <ShoppingCartSimple size={18} className="mr-2" />
-          <Image className="rounded-full mr-3" width={35} height={35} src={pfp} alt="profile picture" />
+          <Image className="rounded-full mr-3" width={35} height={35} src={avatarUrl} alt="profile picture" />
 
         </div>
 

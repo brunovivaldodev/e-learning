@@ -44,7 +44,7 @@ export default function Student() {
 
         <div >
 
-            <Header2 pfp="/pfp.webp"></Header2>
+            <Header2 avatarUrl="/pfp.webp"></Header2>
 
             <div className="flex flex-col bg-white justify-center items-center">
 
