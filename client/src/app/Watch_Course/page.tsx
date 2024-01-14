@@ -1,7 +1,12 @@
+'use client'
+
+import { useState } from 'react';
 import { Bell } from "@phosphor-icons/react/dist/ssr/Bell";
 import { Heart } from "@phosphor-icons/react/dist/ssr/Heart";
 import {
-  ShoppingCart,
+    Faders, Star, ArrowLeft, User, ArrowRight, MagnifyingGlass, Cpu, Handshake, CreditCard,
+    ChartBarHorizontal, BugDroid, PenNib, Megaphone, Package, Camera, Headset, FirstAidKit,
+    CaretDown, CaretUp, Receipt, ShoppingCart
 } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import logo from "../../../public/logo.svg";
@@ -16,10 +21,39 @@ import { IoPeopleCircleOutline } from "react-icons/io5";
 import { BsDownload } from "react-icons/bs";
 import { HiOutlineDocumentText } from "react-icons/hi2";
 import imagem from '../../../public/watch.png'
+import Input from '../components/Input';
 import { IoChatbubblesOutline } from "react-icons/io5";
 
 
 export default function Watch_Course() {
+
+    const [duracaoVisible, setDuracaoVisible] = useState(true);
+
+
+    const duracoes = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+        { id: 4, name: '1-7 dias', isChecked: false, students: 25 },
+    ];
+
+    const [duracoesStates, setDuracaoStates] = useState(duracoes);
+
+    const handleToggleDuracoes = (id) => {
+        setDuracaoStates((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const toggleDuracao = () => {
+        setDuracaoVisible(!duracaoVisible);
+    };
+
     return(
         <>
             <header className="flex flex-col justify-between text-xs">
@@ -174,7 +208,9 @@ export default function Watch_Course() {
                             
                         </div>
                     </div>
+                    
                 </div>
+                
 
                 {/*Direito*/}
                 <div className="w-[30%] space-y-3">
@@ -194,11 +230,39 @@ export default function Watch_Course() {
                         <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Segredos para ser freelancer</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 21 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 38m</p></ul>
                         <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Avançada</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 39 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 1h 31m</p></ul>
                         <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Qual é o próximo</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 7 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 1h 17m</p></ul>
+                        <div className="border border-gray-100 mt-5">
+
+                                <div className="flex justify-between items-center p-2" onClick={toggleDuracao} >
+                                    <p className="flex items-center gap-1"><GrDown /> Começando</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 4 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 51m</p>
+                                    {duracaoVisible ? <CaretUp size={20} /> : <CaretDown size={20} />}
+                                </div>
+
+                                {duracaoVisible && (
+
+                                    <div id="duracao" className='p-2'>
+
+                                        {duracoesStates.map(({ id, name, isChecked, students }) => (
+                                            <div key={id} className='flex justify-between items-center mb-2'>
+                                                <div className='flex'>
+                                                    <Input id={id} name={name} isChecked={isChecked} onToggle={handleToggleDuracoes} />
+                                                    <p className='text-xs text-gray-700 ml-2'>{name}</p>
+                                                </div>
+                                                <p className='text-xs text-gray-500'>{students}</p>
+                                            </div>
+                                        ))}
+
+                                    </div>
+                                )}
+                        </div>
                     </div>
                 </div>
+                
             </div>
-
+            
+            
             
         </>
     )
 }
+
+
