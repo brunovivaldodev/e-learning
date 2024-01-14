@@ -1,3 +1,5 @@
+'use client'
+import { useState } from "react";
 import Header from "../components/Header";
 import Image from "next/image";
 import imagem from '../../../public/SilngleCourse.png'
@@ -29,6 +31,82 @@ import Link from "next/link";
 
 
 export default function SingleCourse(){
+
+    const [duracaoVisible, setDuracaoVisible] = useState(true);
+    const [duracaoVisible2, setDuracaoVisible2] = useState(true);
+    const [duracaoVisible3, setDuracaoVisible3] = useState(true);
+
+
+
+    const duracoes = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+    ];
+
+    const duracoes2 = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+    ];
+
+    const duracoes3 = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+    ];
+
+    const [duracoesStates, setDuracaoStates] = useState(duracoes);
+    const [duracoesStates2, setDuracaoStates2] = useState(duracoes);
+    const [duracoesStates3, setDuracaoStates3] = useState(duracoes);
+
+
+
+    const handleToggleDuracoes = (id) => {
+        setDuracaoStates((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const handleToggleDuracoes2 = (id) => {
+        setDuracaoStates3((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const handleToggleDuracoes3 = (id) => {
+        setDuracaoStates3((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const toggleDuracao = () => {
+        setDuracaoVisible(!duracaoVisible);
+    };
+
+    const toggleDuracao2 = () => {
+        setDuracaoVisible2(!duracaoVisible2);
+    };
+
+    const toggleDuraca3 = () => {
+        setDuracaoVisible3(!duracaoVisible3);
+    };
+
     return(
         <>
             <Header></Header>
@@ -166,7 +244,6 @@ export default function SingleCourse(){
                     <div>
                         <div className="flex justify-between items-center">
                             <h2 className="text-2xl mb-2">Currículo</h2>
-
                         </div>
                     </div>
 
