@@ -89,7 +89,7 @@ export default function Item({ nCursos, data, cursos }: props) {
                         {cursos.map((curso, index) => (
                             <div key={index} className='flex justify-between p-2 '>
                                 <image>
-                                    <Image className="" width= {120} height= {100} src={curso.thumbnail} alt="course thumbnail" />
+                                    <Image className="" width={120} height={100} src={curso.thumbnail} alt="course thumbnail" />
                                 </image>
                                 <div className='flex flex-col justify-between pl-2'>
                                     <div>
@@ -111,7 +111,7 @@ export default function Item({ nCursos, data, cursos }: props) {
                             </div>
                         ))}
 
-                
+
                     </div>
 
                     <div className='flex w-2/4 flex-col items-center justify-center'>

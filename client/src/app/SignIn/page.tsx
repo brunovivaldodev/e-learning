@@ -54,7 +54,7 @@ export default function SignIn() {
                                 id="checkbox"
                                 className="mr-2"
                             /> Lembrar-me</p>
-                            <button className="text-white text-sm bg-laranja p-2 rounded-lg flex justify-between items-center gap-2 px-10"><Link href={'/Student/dashboard'}>Entrar</Link> <GoArrowRight/></button>
+                            <button className="text-white text-sm bg-laranja p-2 rounded-lg flex justify-between items-center gap-2 px-10"><Link href={'/Student'}>Entrar</Link> <GoArrowRight/></button>
                         </div>
                         
                         <div className="flex justify-between text-xs mt-10">
