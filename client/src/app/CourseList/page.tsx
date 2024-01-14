@@ -8,6 +8,7 @@ import { GoArrowRight } from "react-icons/go";
 import { GoArrowLeft } from "react-icons/go";
 import Link from "next/link";
 import Curso from "../components/Curso";
+import Curso3 from "../components/Curso3";
 
 export default function CourseList() {
     return(
@@ -37,19 +38,19 @@ export default function CourseList() {
 
                 <hr className="mb-6"/>
 
-                <div className="grid grid-cols-4 gap-4 justify-center">
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
-                    <Curso></Curso>
+                <div className="grid grid-cols-4 gap-2 justify-center">
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
+                    <Curso3/>
                 </div>
 
                 <div className="flex justify-center space-x-6 mt-10 text-base items-center">

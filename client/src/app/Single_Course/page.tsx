@@ -1,3 +1,5 @@
+'use client'
+import { useState } from "react";
 import Header from "../components/Header";
 import Image from "next/image";
 import imagem from '../../../public/SilngleCourse.png'
@@ -25,9 +27,86 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import Curso3 from "../components/Curso3";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 
 export default function SingleCourse(){
+
+    const [duracaoVisible, setDuracaoVisible] = useState(true);
+    const [duracaoVisible2, setDuracaoVisible2] = useState(true);
+    const [duracaoVisible3, setDuracaoVisible3] = useState(true);
+
+
+
+    const duracoes = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+    ];
+
+    const duracoes2 = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+    ];
+
+    const duracoes3 = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+    ];
+
+    const [duracoesStates, setDuracaoStates] = useState(duracoes);
+    const [duracoesStates2, setDuracaoStates2] = useState(duracoes);
+    const [duracoesStates3, setDuracaoStates3] = useState(duracoes);
+
+
+
+    const handleToggleDuracoes = (id) => {
+        setDuracaoStates((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const handleToggleDuracoes2 = (id) => {
+        setDuracaoStates3((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const handleToggleDuracoes3 = (id) => {
+        setDuracaoStates3((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const toggleDuracao = () => {
+        setDuracaoVisible(!duracaoVisible);
+    };
+
+    const toggleDuracao2 = () => {
+        setDuracaoVisible2(!duracaoVisible2);
+    };
+
+    const toggleDuraca3 = () => {
+        setDuracaoVisible3(!duracaoVisible3);
+    };
+
     return(
         <>
             <Header></Header>
@@ -49,7 +128,7 @@ export default function SingleCourse(){
                                     <IoPeopleCircleOutline size={35}/>
                                     <div>
                                         <p className="text-xs text-gray-500">Criado por:</p>
-                                        <p className="text-sm">Dianne Russell • Kristin Watson</p>
+                                        <p className="text-sm">Daniel Sofrimento • Ladislau Lutete </p>
                                     </div>
                                 </div>
                                 <div className="flex items-center space-x-1">
@@ -82,7 +161,7 @@ export default function SingleCourse(){
                         href="#Análise">Análise</a>
                     </div>
                     <div className="mt-10 space-y-4">
-                    <h2 className="text-2xl font-semibold" id="Visão">Descrição</h2>
+                    <h2 className="text-2xl " id="Visão">Descrição</h2>
                     <p className="text-sm text-gray-600">
                             It gives you a huge self-satisfaction when you look at your work and say, "I made this!". I love that feeling after I'm done working on something. When I lean back in my chair, look at the final result with a smile, and have this little "spark joy" moment. It's especially satisfying when I know I just made $5,000.<br /><br />
 
@@ -163,14 +242,20 @@ export default function SingleCourse(){
                     </div>
 
                     <div>
+                        <div className="flex justify-between items-center">
+                            <h2 className="text-2xl mb-2">Currículo</h2>
+                        </div>
+                    </div>
+
+                    <div>
                         <div className="flex items-center" id="Instrutor">
-                            <h2 className="text-2xl font-semibold">Instrutor do curso</h2>
+                            <h2 className="text-2xl">Instrutor do curso</h2>
                             <p className="text-xl">(02)</p>
                         </div>
                         <div className="mt-4 mb-4 border-2 border-gray-200 flex space-x-2 p-2">
                             <IoPersonCircleSharp size={150} />
                             <div className="space-y-2">
-                                <h1 className="">Vako Shvili</h1>
+                                <h1 className="">Daniel Sofrimento</h1>
                                 <p className="text-gray-500 text-xs">Web Designer e instrutor mais vendido</p>
                                 <ul className="text-xs text-gray-500 flex items-center space-x-4">
                                     <li className="flex gap-2 items-center"><IoStar size={15} color='#FD8E1F'/>4.9 Classificação do curso</li>
@@ -186,7 +271,7 @@ export default function SingleCourse(){
                         <div className="mt-4 mb-4 border-2 border-gray-200 flex space-x-2 p-2">
                             <IoPersonCircleSharp size={150} />
                             <div className="space-y-2">
-                                <h1 className="">Nima Tahami</h1>
+                                <h1 className="">Ladislau Lutete</h1>
                                 <p className="text-gray-500 text-xs">Empreendedor e Designer • Fundador da ShiftRide</p>
                                 <ul className="text-xs text-gray-500 flex items-center space-x-4">
                                     <li className="flex gap-2 items-center"><IoStar size={15} color='#FD8E1F'/>4.6 Classificação do curso</li>
@@ -333,7 +418,7 @@ export default function SingleCourse(){
 
                     <div className="space-y-3">
                         <div className="flex justify-between items-center">
-                            <h1 className="text-2xl font-semibold">Feedback dos alunos</h1>
+                            <h2 className="text-2xl">Feedback dos alunos</h2>
                             <button className="border-2 border-gray-300 flex justify-between space-x-2 p-2 text-xs items-center text-gray-500">
                                 <p>Avaliação de 5 estrelas</p>
                                 <IoIosArrowDown />
@@ -366,8 +451,8 @@ export default function SingleCourse(){
             </div>
             <div className="space-y-4 mt-8 mx-56 mb-14">
                     <div className="flex justify-between items-center">
-                        <h1 className="text-2xl font-semibold">Cursos Relacionados</h1>
-                        <button className="bg-peach text-[#FF6636] p-2 text-sm flex justify-between items-center gap-2">Ver Tudo <GoArrowRight color='FF6636'/></button>
+                        <h2 className="text-2xl">Cursos Relacionados</h2>
+                        <button className="bg-peach  p-2 flex justify-between items-center gap-2"><Link className="text-[#FF6636] text-sm" href={'/CourseList'}>Ver Tudo</Link> <GoArrowRight color='FF6636'/></button>
                     </div>
                     <div className="flex gap-2 justify-center">
                         <Curso3></Curso3>

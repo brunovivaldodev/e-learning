@@ -1,7 +1,10 @@
+'use client'
+
+import { useState } from 'react';
 import { Bell } from "@phosphor-icons/react/dist/ssr/Bell";
 import { Heart } from "@phosphor-icons/react/dist/ssr/Heart";
 import {
-  ShoppingCart,
+    CaretDown, CaretUp, ShoppingCart
 } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import logo from "../../../public/logo.svg";
@@ -11,15 +14,92 @@ import { GoArrowLeft } from "react-icons/go";
 import { FaRegFolderOpen } from "react-icons/fa";
 import { LuPlayCircle } from "react-icons/lu";
 import { TbClockHour3 } from "react-icons/tb";
-import { GrDown } from "react-icons/gr";
 import { IoPeopleCircleOutline } from "react-icons/io5";
 import { BsDownload } from "react-icons/bs";
 import { HiOutlineDocumentText } from "react-icons/hi2";
 import imagem from '../../../public/watch.png'
+import Input from '../components/Input';
+import { IoPlay } from "react-icons/io5";
 import { IoChatbubblesOutline } from "react-icons/io5";
 
 
 export default function Watch_Course() {
+
+    const [duracaoVisible, setDuracaoVisible] = useState(true);
+    const [duracaoVisible2, setDuracaoVisible2] = useState(true);
+    const [duracaoVisible3, setDuracaoVisible3] = useState(true);
+
+
+
+    const duracoes = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+    ];
+
+    const duracoes2 = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+    ];
+
+    const duracoes3 = [
+        { id: 0, name: '6-12 meses', isChecked: false, students: 200 },
+        { id: 1, name: '3-6 meses', isChecked: false, students: 100 },
+        { id: 2, name: '1-3 meses', isChecked: false, students: 750 },
+        { id: 3, name: '1-4 semanas', isChecked: false, students: 25 },
+    ];
+
+    const [duracoesStates, setDuracaoStates] = useState(duracoes);
+    const [duracoesStates2, setDuracaoStates2] = useState(duracoes);
+    const [duracoesStates3, setDuracaoStates3] = useState(duracoes);
+
+
+
+    const handleToggleDuracoes = (id) => {
+        setDuracaoStates((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const handleToggleDuracoes2 = (id) => {
+        setDuracaoStates3((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const handleToggleDuracoes3 = (id) => {
+        setDuracaoStates3((prevStates) => {
+            const newStates = prevStates.map((state) => ({
+                ...state,
+                isChecked: state.id === id,
+            }));
+            return newStates;
+        });
+    };
+
+    const toggleDuracao = () => {
+        setDuracaoVisible(!duracaoVisible);
+    };
+
+    const toggleDuracao2 = () => {
+        setDuracaoVisible2(!duracaoVisible2);
+    };
+
+    const toggleDuraca3 = () => {
+        setDuracaoVisible3(!duracaoVisible3);
+    };
+
     return(
         <>
             <header className="flex flex-col justify-between text-xs">
@@ -174,7 +254,9 @@ export default function Watch_Course() {
                             
                         </div>
                     </div>
+                    
                 </div>
+                
 
                 {/*Direito*/}
                 <div className="w-[30%] space-y-3">
@@ -187,18 +269,82 @@ export default function Watch_Course() {
                         <div className="w-[85%] border-2 border-gray-300"></div>
                     </div> 
                     <div>
-                        <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Começando</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 4 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 51m</p></ul>
-                        <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Segredo do Bom Desing</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 52 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 5h 5m</p></ul>
-                        <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Pratique design como artista</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 43 leituras <TbClockHour3 color='#FF6636' className='ml-2'/>51m</p></ul>
-                        <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Desenvolvimento Web</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 172 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 10h 6m</p></ul> 
-                        <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Segredos para ser freelancer</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 21 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 38m</p></ul>
-                        <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Avançada</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 39 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 1h 31m</p></ul>
-                        <ul className="flex justify-between p-3 text-xs border-gray-300 border-[1px]"><p className="flex items-center gap-1"><GrDown /> Qual é o próximo</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 7 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 1h 17m</p></ul>
+                        <div className="border border-gray-100">
+                            <div className="flex justify-between items-center p-2 text-sm" onClick={toggleDuracao} >
+                                <p className="flex items-center gap-1 "> Começando</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 4 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 51m</p>
+                                {duracaoVisible ? <CaretUp size={20} /> : <CaretDown size={20} />}
+                            </div>
+
+                            {duracaoVisible && 
+                                <>
+                                <ul id="duracao" className='p-2 space-y-3'>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={true} onToggle={handleToggleDuracoes} />1. O que é fluxo da Web?</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={false} onToggle={handleToggleDuracoes} />2. Cadastre-se no Webflow</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={false} onToggle={handleToggleDuracoes} />3. Teaser do Webflow</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={false} onToggle={handleToggleDuracoes} />4. Introdução ao Figma</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    
+                                </ul>
+                                </>
+                            }
+                        </div>
+                        <div className="border border-gray-100">
+                            <div className="flex justify-between items-center p-2 text-sm" onClick={toggleDuracao2} >
+                                <p className="flex items-center gap-1 "> Segredo do Bom Design</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 4 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 51m</p>
+                                {duracaoVisible2 ? <CaretUp size={20} /> : <CaretDown size={20} />}
+                            </div>
+
+                            {duracaoVisible2 && 
+                                <>
+                                <ul id="duracao" className='p-2 space-y-3'>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={true} onToggle={handleToggleDuracoes2} />1. O que é fluxo da Web?</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={false} onToggle={handleToggleDuracoes2} />2. Cadastre-se no Webflow</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={false} onToggle={handleToggleDuracoes2} />3. Teaser do Webflow</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={false} onToggle={handleToggleDuracoes2} />4. Introdução ao Figma</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    
+                                </ul>
+                                </>
+                            }
+                        </div>
+                        <div className="border border-gray-100">
+                            <div className="flex justify-between items-center p-2 text-sm" onClick={toggleDuraca3} >
+                                <p className="flex items-center gap-1 "> Pratique design como um artista</p><p className="flex items-center gap-1 text-gray-500"><LuPlayCircle color='#564FFD'/> 4 leituras <TbClockHour3 color='#FF6636' className='ml-2'/> 51m</p>
+                                {duracaoVisible3 ? <CaretUp size={20} /> : <CaretDown size={20} />}
+                            </div>
+
+                            {duracaoVisible3 && 
+                                <>
+                                <ul id="duracao" className='p-2 space-y-3'>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={true} onToggle={handleToggleDuracoes3} />1. O que é fluxo da Web?</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={false} onToggle={handleToggleDuracoes3} />2. Cadastre-se no Webflow</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={false} onToggle={handleToggleDuracoes3} />3. Teaser do Webflow</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    <li className='text-xs text-gray-700 ml-2 flex items-center justify-between'><p className='flex items-center'><Input id={undefined} name={name} isChecked={false} onToggle={handleToggleDuracoes3} />4. Introdução ao Figma</p>
+                                    <p className='text-xs text-gray-500 gap-1 flex items-center'><IoPlay />07:31</p></li>
+                                    
+                                </ul>
+                                </>
+                            }
+                        </div>
+                        
                     </div>
                 </div>
+                
             </div>
-
+            
+            
             
         </>
     )
 }
+
+
