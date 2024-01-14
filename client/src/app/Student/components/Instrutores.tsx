@@ -12,6 +12,8 @@ export default function Instrutores() {
         { avatarUrl: "/instrutor.png", name: "Wanda Maximoff", description: "Chaos Witch?", stars: "1.2", students: "10000" },
         { avatarUrl: "/instrutor.png", name: "Stephen Strange", description: "Mestre das Artes Místicas", stars: "5.0", students: "100000" },
         { avatarUrl: "/instrutor.png", name: "Sediangani Sofrimento", description: "Desenvolvedor Web", stars: "0.0", students: "10000" },
+        { avatarUrl: "/instrutor.png", name: "Stephen Strange", description: "Mestre das Artes Místicas", stars: "5.0", students: "100000" },
+        { avatarUrl: "/instrutor.png", name: "Stephen Strange", description: "Mestre das Artes Místicas", stars: "5.0", students: "100000" },
         { avatarUrl: "/instrutor.png", name: "Stephen Strange", description: "Mestre das Artes Místicas", stars: "5.0", students: "100000" }
 
     ]

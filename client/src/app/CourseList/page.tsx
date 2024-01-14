@@ -12,7 +12,7 @@ import Curso from "../components/Curso";
 export default function CourseList() {
     return(
         <>
-            <Header/>
+            <Header avatarUrl="none"/>
             <hr />
             <section className="flex flex-col justify-between text-xs mx-48 pt-10 mb-20">
                 <nav className="flex justify-between p-4 mb-4">

@@ -8,9 +8,9 @@ import { GoPerson } from 'react-icons/go';
 export default function Curso() {
     return (
 
-        <div className='flex flex-col w-1/4 mb-3'>
+        <div className='flex w-1/4 flex-col mb-3'>
 
-            <div className='m-1.5 border border-gray-100'>
+            <div className='m-1.5 border bg-white border-gray-100'>
                 <Image className="w-full p-0" src={course} alt="course" />
 
                 <div className='flex justify-between p-2 items-center'>
@@ -18,7 +18,7 @@ export default function Curso() {
                     <p className='text-sm text-orange-500 font-bold'>24000 AKZ</p>
                 </div>
 
-                <p className='text-sm p-2 font-bold'>Estrutura de Dados e Algoritmos (2021)</p>
+                <p className='text-[12px] p-2 font-bold'>Estrutura de Dados e Algoritmos (2021)</p>
 
                 <div className='flex p-3 justify-between border border-gray-100'>
 

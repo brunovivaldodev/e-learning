@@ -125,7 +125,7 @@ export default function Courses_List_Filter() {
 
         <div>
 
-            <Header></Header>
+            <Header avatarUrl='none'></Header>
 
             <div className="bg-white justify-center">
 

@@ -12,7 +12,7 @@ export default function Courses_List() {
     return (
 
         <div>
-            <Header></Header>
+            <Header avatarUrl="none"/>
 
             <div className="bg-white justify-center">
 

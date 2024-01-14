@@ -6,7 +6,7 @@ export default function Student_wishlist() {
 
     return (
 
-        <div >
+        <div>
 
             <p className="text-lg font-bold mt-5 mb-5">Wishlist</p>
 
