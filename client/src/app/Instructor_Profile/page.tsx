@@ -3,66 +3,17 @@ import pfp from "../../../public/pfp.webp";
 import { IoPersonCircleOutline, IoPlayCircleSharp, IoStar } from "react-icons/io5";
 import { BsPeople, BsWhatsapp } from "react-icons/bs";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
-import { HiOutlineSquare2Stack } from "react-icons/hi2";
 import Curso3 from "../components/Curso3";
 import { IoIosArrowDown } from "react-icons/io";
 import { RiLoader2Fill } from "react-icons/ri";
 import Footer from "../components/Footer";
-import {
-    ShoppingCart,
-} from "@phosphor-icons/react/dist/ssr";
-import { Bell } from "@phosphor-icons/react/dist/ssr/Bell";
-import { Heart } from "@phosphor-icons/react/dist/ssr/Heart";
-import logo from "../../../public/logo.svg";
-import Link from "next/link";
+import Header from "../components/Header";
 
 
 export default function InstructorProfile() {
     return(
         <>
-            <header className="flex flex-col justify-between text-xs">
-                <nav className="flex justify-between p-4 bg-gray-800">
-                <div>
-                    <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/"}>Home</Link>
-                    <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/CourseList"}>Cursos</Link>
-                    <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/About"}>Sobre</Link>
-                    <Link className="p-4 text-gray-300 hover:text-orange-400" href={"BecomeInstructor"}>Torne-se um instrutor</Link>
-                </div>
-                <div>
-                    <a className="p-4 text-gray-300">USD</a>
-                    <a className="p-4 text-gray-300">English</a>
-                </div>
-                </nav>
-                <div className="flex p-3 justify-between">
-                <div className="flex">
-                    <image className="mr-8">
-                        <Image src={logo} alt="logo" />
-                    </image>
-                    <div className="flex gap-4">
-                    <input
-                        className="w-44 h-10 border-gray-800 border-2 outline-none pl-2"
-                        type="text"
-                        placeholder="Procurar"
-                    />
-                    <input
-                        className="w-72 h-10 border-gray-800 border-2 outline-none pl-2"
-                        type="text"
-                        placeholder="O que você quer aprender ..."
-                    />
-                    </div>
-                </div>
-                <div className="flex justify-between gap-4">
-                    <div className="flex gap-4 items-center">
-                    <Bell size={22} />
-                    <Heart size={22} />
-                    <ShoppingCart size={22} />
-                    </div>
-                    <div className="">
-                        <IoPersonCircleOutline size={35} color='#FF6636'/>
-                    </div>
-                </div>
-                </div>
-            </header>
+            <Header avatarUrl="none"></Header>
             <div className="flex bg-peach justify-center w-full">
 
                 <div className="flex w-3/4 mt-10 items-center bg-white border border-orange-200 p-5">
