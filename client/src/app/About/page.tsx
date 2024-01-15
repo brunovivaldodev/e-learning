@@ -5,7 +5,14 @@ import google from "../../../public/google.png";
 import aboutR from "../../../public/aboutR.png";
 import aboutA from "../../../public/aboutA.png";
 import total from "../../../public/total.png";
+import chevron from "../../../public/chevron.png";
 import unitel from "../../../public/unitel.png";
+import baker from "../../../public/bakerhughes.png";
+import sistec from "../../../public/sistec.png";
+import ncr from "../../../public/ncr.png";
+import bai from "../../../public/bai.png";
+import sonangol from "../../../public/sonangol.png";
+
 import Footer from "@/app/components/Footer";
 
 import { AiOutlineTeam, AiOutlineFileDone } from "react-icons/ai";
@@ -48,25 +55,25 @@ export default function About() {
                     <Image src={total} alt="total" />
                     </image>
                     <image>
-                    <Image src={google} alt="google" />
+                    <Image src={chevron} alt="google" />
                     </image>
                     <image>
-                    <Image src={google} alt="google" />
-                    </image>
-                    <image>
-                    <Image src={unitel} alt="unitel" />
-                    </image>
-                    <image>
-                    <Image src={total} alt="total" />
-                    </image>
-                    <image>
-                    <Image src={google} alt="google" />
-                    </image>
-                    <image>
-                    <Image src={google} alt="google" />
+                    <Image src={sonangol} alt="google" />
                     </image>
                     <image>
                     <Image src={unitel} alt="unitel" />
+                    </image>
+                    <image>
+                    <Image src={baker} alt="total" />
+                    </image>
+                    <image>
+                    <Image src={sistec} alt="google" />
+                    </image>
+                    <image>
+                    <Image src={ncr} alt="google" />
+                    </image>
+                    <image>
+                    <Image src={bai} alt="unitel" />
                     </image>
                 </div>
             </section>
