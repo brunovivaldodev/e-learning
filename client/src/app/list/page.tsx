@@ -3,9 +3,9 @@
 import Image from "next/image";
 import pfp from "../../../public/pfp.webp";
 import { Faders, Star, ArrowLeft, User, ArrowRight, MagnifyingGlass } from "@phosphor-icons/react/dist/ssr";
-import Header from "../../components/Header"
-import Footer from "../../components/Footer"
-import Curso from '../../components/Curso'
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import Curso from '../components/Curso'
 import Link from 'next/link';
 
 export default function Courses_List() {

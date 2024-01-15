@@ -1,3 +1,4 @@
+'use client'
 import Header from "../components/Header";
 import inst from "../../../public/aboutI.png";
 import Image from "next/image";
@@ -20,6 +21,10 @@ import { BiWorld } from "react-icons/bi";
 import { IoMdCloudDone } from "react-icons/io";
 import { LuFiles } from "react-icons/lu";
 
+import {
+    SealCheck, GlobeHemisphereWest ,Users, Notebook, Stack  
+} from "@phosphor-icons/react";
+
 export default function About() {
     return(
         <div>
@@ -41,13 +46,13 @@ export default function About() {
 
             <section className="flex items-center gap-8 mt-8 mx-24">
                 <div className="w-96 mr-18">
-                    <h2 className="text-3xl mb-4">
-                    Queremos crescer com o apoio de várias companhias
+                    <h2 className="text-3xl mb-4 font-bold">
+                    Queremos crescer com o apoio de várias empresas
                     </h2>
                     <p className="text-sm">
-                    Venha aprender com os instructores de muitas dessas companhias, e
-                    capacitar os seus colaboradores com os melhores profissionais do
-                    mercado
+                    Venha aprender com os instructores de muitas dessas empresas, e
+                    capacite-se com os melhores profissionais do
+                    mercado.
                     </p>
                 </div>
                 <div className="flex-1 grid grid-cols-4 gap-4">
@@ -81,34 +86,34 @@ export default function About() {
             <section className="flex items-center justify-center space-x-10 mt-8 mx-24 mb-8">  
             
                 <div className="flex items-center space-x-2">
-                    <div><AiOutlineTeam color="orange" size={42}/> </div>
+                    <div><Users  color="#FF6636" size={42} weight="duotone"/> </div>
                     <div className="flex-col">
-                        <p className="text-2xl">67.1k</p>
+                        <p className="text-2xl font-bold">67.1k</p>
                         <p className="text-sm">Estudantes</p></div>
                 </div>
 
                 <div className="flex items-center space-x-2">
-                    <div><AiOutlineFileDone color="green" size={42}/> </div>
+                    <div><Notebook  color="#564FFD" size={42} weight="duotone"/> </div>
                     <div className="flex-col">
-                        <p className="text-2xl">26k</p>
+                        <p className="text-2xl font-bold">26k</p>
                         <p className="text-sm">Instrutores certificados</p></div>
                 </div>
                 <div className="flex items-center space-x-2">
-                    <div><BiWorld color='green' size={42}/></div>
+                    <div><GlobeHemisphereWest  color='#E34444' size={42} weight="duotone"/></div>
                     <div className="flex-col">
-                        <p className="text-2xl">72</p>
+                        <p className="text-2xl font-bold">72</p>
                         <p className="text-sm">Línguas</p></div>
                 </div>
                 <div className="flex items-center space-x-2">
-                    <div><IoMdCloudDone color='green' size={42}/> </div>
+                    <div><SealCheck color='green' size={42} weight="duotone"/> </div>
                     <div className="flex-col">
-                        <p className="text-2xl">99.9%</p>
+                        <p className="text-2xl font-bold">99.9%</p>
                         <p className="text-sm">Taxa de sucesso</p></div>
                 </div>
                 <div className="flex items-center space-x-2">
-                    <div><LuFiles size={42} color='orange' /></div>
-                    <div className="flex-col">
-                        <p className="text-2xl">57</p>
+                    <div><Stack size={42} color='#FD8E1F' weight="duotone" /></div>
+                    <div className="flex-col ">
+                        <p className="text-2xl font-bold">57</p>
                         <p className="text-sm">Empresas confiáveis</p></div>
                 </div>
                 <div></div> 

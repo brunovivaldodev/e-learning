@@ -24,8 +24,8 @@ export default function Header({ avatarUrl }: HeaderProps) {
 
         <nav className="p-2">
           <a href="/" className="text-[10px] text-white hover:text-orange-400 m-2">Home</a>
-          <a href="CourseList" className="text-[10px] text-white hover:text-orange-400 m-2">Cursos</a>
-          <a href="About" className="text-[10px] text-white hover:text-orange-400 m-2">Sobre</a>
+          <a href="/CourseList" className="text-[10px] text-white hover:text-orange-400 m-2">Cursos</a>
+          <a href="/About" className="text-[10px] text-white hover:text-orange-400 m-2">Sobre</a>
           <a href="" className="text-[10px] text-white hover:text-orange-400 m-2">Contactos</a>
         </nav>
 
@@ -72,8 +72,8 @@ export default function Header({ avatarUrl }: HeaderProps) {
           ) : (
 
             <div className="flex">
-              <Link href="SignUp"><Button buttonText="Criar Conta" /></Link>
-              <Link href="SignIn"><Button2 buttonText="Entrar" /></Link> 
+              <a href="SignUp"><Button buttonText="Criar Conta" /></a>
+              <a href="SignIn"><Button2 buttonText="Entrar" /></a> 
             </div>
 
           )}

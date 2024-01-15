@@ -19,7 +19,7 @@ import sistec from "../../public/sistec.png";
 import ncr from "../../public/ncr.png";
 import bai from "../../public/bai.png";
 import {
-    ArrowRight, PaperPlaneRight
+    ArrowRight, PaperPlaneRight, SealCheck
 } from "@phosphor-icons/react";
 
 
@@ -69,7 +69,7 @@ export default function LandingPage() {
 
                     <div className='w-1/5'>
 
-                        <Link href={"/SignUp"}><Button buttonText='Criar Conta'></Button></Link>
+                        <a href="/SignUp"><Button buttonText='Criar Conta'></Button></a>
 
                     </div>
                 </div>
@@ -92,7 +92,7 @@ export default function LandingPage() {
 
                 </div>
 
-                
+
 
                 <div className='flex items-center'>
                     <p className='text-[10px] mr-2 text-gray-700'>Temos mais categorias e subcategorias.</p>
@@ -130,7 +130,7 @@ export default function LandingPage() {
                     <Curso></Curso>
                 </div>
 
-                <Link href="/CourseList"><Button2 buttonText='Ver Todos Os Cursos'></Button2></Link>
+                <a href="/CourseList"><Button2 buttonText='Ver Todos Os Cursos'></Button2></a>
 
 
             </div>
@@ -152,7 +152,7 @@ export default function LandingPage() {
 
                     <div className='flex items-center mb-4'>
                         <p className='text-[10px] mr-2 text-gray-700'>Milhares de estudantes à espera de um instrutor. Comece a ensinar e ganhar agora!</p>
-                        <Link href="/BecomeInstructor"><p className='text-[10px] mr-1' style={{ color: "#FF6636" }}>Torne-se um instrutor</p></Link>
+                        <a href="/BecomeInstructor"><p className='text-[10px] mr-1' style={{ color: "#FF6636" }}>Torne-se um instrutor</p></a>
                         <ArrowRight size={10} style={{ color: "#FF6636" }}></ArrowRight>
                     </div>
 
@@ -177,7 +177,7 @@ export default function LandingPage() {
 
                     <div className="flex items-center ml-4  w-1/2 grid grid-cols-4 gap-4">
                         <image>
-                            <Image src={total}  alt="total" />
+                            <Image src={total} alt="total" />
                         </image>
                         <image>
                             <Image src={chevron} alt="google" />
@@ -189,15 +189,17 @@ export default function LandingPage() {
                             <Image src={unitel} alt="unitel" />
                         </image>
                         <image>
-                            <Image src={sistec} alt="total" />
+                            <Image src={baker} alt="total" />
+                        </image>
+                        <image>
+                            <Image src={sistec} alt="google" />
                         </image>
                         <image>
                             <Image src={ncr} alt="google" />
                         </image>
                         <image>
-                            <Image src={baker} alt="google" />
-                        </image>
                             <Image src={bai} alt="unitel" />
+                        </image>
                     </div>
 
                 </div>

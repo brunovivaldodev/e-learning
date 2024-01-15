@@ -18,7 +18,7 @@ export default function CourseList() {
             <section className="flex flex-col justify-between text-xs mx-48 pt-10 mb-20">
                 <nav className="flex justify-between p-4 mb-4">
                     <div className="space-x-6">
-                        <Link href='/Courses/list_filter' className="text-center w-36 h-10 border-orange-500 border-2 outline-none p-2.5">Filtros</Link>
+                        <Link href='/list_filter' className="text-center w-36 h-10 border-orange-500 border-2 outline-none p-2.5">Filtros</Link>
 
                         <input
                             className="w-72 h-10 border-2 outline-none pl-2"

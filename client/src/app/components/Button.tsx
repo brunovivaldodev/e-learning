@@ -9,9 +9,9 @@ interface AulaButtonProps {
 
 const Button: React.FC<AulaButtonProps> = ({ buttonText }) => {
   return (
-      <Link className="flex m-2 p-1.5 items-center justify-center" style={{ fontSize: '12px', fontWeight: 500, color: "white", backgroundColor:"#FF6636" }}  href="">
+      <div className="flex m-2 p-1.5 items-center justify-center" style={{ fontSize: '12px', fontWeight: 500, color: "white", backgroundColor:"#FF6636" }}  href="">
         {buttonText}
-      </Link>
+      </div>
   );
 };
 

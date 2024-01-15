@@ -13,8 +13,6 @@ interface props {
 export default function Categoria({ categoria, color, icon, nCursos }: props) {
 
 
-    console.log(categoria, color, icon, nCursos);
-
     const opacity = 100;
     const backgroundColorClass = `bg-${color}-${opacity}`;
 
