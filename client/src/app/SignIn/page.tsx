@@ -30,8 +30,8 @@ export default function SignIn() {
                     </image>
                 </div>
 
-                <div className="flex justify-center items-center h-full mr-36 -mt-20">
-                    <form action="" className="w-[500px]">
+                <div className="flex justify-center items-center h-full -mt-[5%]">
+                    <form action="" className="w-[60%]">
                         <h1 className="font-bold text-2xl mb-8 text-center">Faça login na sua conta</h1>
                         <hr />
                         <div className="mt-4 flex flex-col space-y-2">

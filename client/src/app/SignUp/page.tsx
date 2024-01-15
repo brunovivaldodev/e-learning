@@ -31,7 +31,7 @@ export default function SignUp() {
                     </image>
                 </div>
 
-                <div className="flex justify-center items-center h-full mr-36 -mt-20">
+                <div className="flex justify-center items-center h-full -mt-[5%]">
                     <form action="" className="">
                         <h1 className="font-bold text-2xl mb-8 text-center">Crie a sua conta</h1>
                         <hr />

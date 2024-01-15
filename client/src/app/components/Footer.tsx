@@ -19,7 +19,7 @@ export default function Footer() {
             Isptec
           </h2>
           <div className="flex gap-2">
-            <div className="flex bg-orange-500 w-40 h-10 p-2 text-white">
+            <div className="flex bg-laranja w-40 h-10 p-2 text-white">
               <a href="">Junta-se à família</a>
             </div>
             <div className="flex bg-gray-700 w-48 h-10 p-2 text-white">

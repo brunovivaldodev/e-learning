@@ -72,7 +72,7 @@ export default function InstructorProfile() {
                     </image>
 
                     <div className="ml-10 space-y-3">
-                        <h1 className="font-bold text-sm">Kamila Gilbert</h1>
+                        <h1 className="font-bold text-sm">Francisca Tungumuna</h1>
                         <p className="text-gray-500 text-xs">Web Designer e instrutor mais vendido</p>
                         <div className="flex justify-between items-center gap-64">
                             <ul className="text-xs text-gray-500 flex items-center space-x-4">
@@ -111,7 +111,7 @@ export default function InstructorProfile() {
                             <a className="hover:border-b-2 hover:border-orange-500 pb-3 p-3 text-center" href="#Análise">Análise</a>
                         </div>
                         <div className="space-y-3" id="Cursos">
-                            <h2 className="text-xl"><b>Kamila Cursos</b> (02)</h2>
+                            <h2 className="text-xl"><b>Tungumuna Cursos</b> (02)</h2>
                             <div className="grid grid-cols-3 gap-2 w-full">
                             <Curso3 />
                             <Curso3 />
