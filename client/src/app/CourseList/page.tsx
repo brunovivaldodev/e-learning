@@ -16,25 +16,38 @@ export default function CourseList() {
             <Header avatarUrl="none"/>
             <hr />
             <section className="flex flex-col justify-between text-xs mx-48 pt-10 mb-20">
-                <nav className="flex justify-between p-4 mb-4">
-                    <div className="space-x-6">
-                        <Link href='/list_filter' className="text-center w-36 h-10 border-orange-500 border-2 outline-none p-2.5">Filtros</Link>
+                <div className="flex flex-col w-full justify-center items-center">
 
-                        <input
-                            className="w-72 h-10 border-2 outline-none pl-2"
-                            type="text"
-                            placeholder="UI/UX Design"
-                        />
+                <div className="flex w-full justify-between mt-5">
+
+                    <div className="flex w-1/2">
+                        <div className="p-2 border border-orange-600 w-1/4 m-1 flex justify-between items-center mr-3">
+                            <Faders size={20} className="text-orange-600" />
+                            <p className="text-xs font-bold ml-2 text-orange-600 pr-1">Filtros</p>
+                        </div>
+
+                        <div className="flex w-3/4 m-1 border border-gray-200 p-2 items-center">
+                            <MagnifyingGlass size={15} />
+                            <input className="text-xs w-full outline-none" type="text" name="" id="" placeholder=" Procura nos cursos..." />
+                        </div>
                     </div>
-                    <div className="flex space-x-4 items-center">
-                        <p>Procura por:</p>
-                        <input
-                            className="w-36 h-10 border-2 outline-none pl-2"
-                            type="text"
-                            placeholder="Treino"
-                        />
+
+                    <div className="flex items-center">
+                        <p className="text-gray-600 text-xs mr-2">Ordenar por:</p>
+                        <select className="flex text-xs text-gray-500 mt-1 border border-gray-200 p-2 justify-center items-center" name="" id="">
+                            <option className="text-xs text-gray-500 p-2" value="">Cursos Terminados</option>
+                            <option className="text-xs text-gray-500 p-2" value="">Cursos em progresso</option>
+                        </select>
                     </div>
-                </nav>
+
+                </div>
+
+                <div className="flex justify-end w-full border-b pb-2 pt-2 border-grey-100 ">
+                    <p className="text-xs text-gray-900 font-bold mr-1">1,234,567 resultados encontrados </p>
+                    <p className="text-xs text-gray-500">"ui/ux design"</p>
+                </div>
+
+            </div>
 
                 <hr className="mb-6"/>
 
