@@ -128,7 +128,7 @@ export default function SingleCourse(){
                                     <IoPeopleCircleOutline size={35}/>
                                     <div>
                                         <p className="text-xs text-gray-500">Criado por:</p>
-                                        <p className="text-sm">Daniel Sofrimento • Ladislau Lutete </p>
+                                        <p className="text-sm">Francisca Tungumuna • Ladislau Lutete </p>
                                     </div>
                                 </div>
                                 <div className="flex items-center space-x-1">
@@ -255,8 +255,8 @@ export default function SingleCourse(){
                         <div className="mt-4 mb-4 border-2 border-gray-200 flex space-x-2 p-2">
                             <IoPersonCircleSharp size={150} />
                             <div className="space-y-2">
-                                <h1 className="">Daniel Sofrimento</h1>
-                                <p className="text-gray-500 text-xs">Web Designer e instrutor mais vendido</p>
+                                <h1 className=""><Link href={'/Instructor_Profile'}>Francisca Tungumuna</Link></h1>
+                                <p className="text-gray-500 text-xs">Web Designer e instrutora mais vendida</p>
                                 <ul className="text-xs text-gray-500 flex items-center space-x-4">
                                     <li className="flex gap-2 items-center"><IoStar size={15} color='#FD8E1F'/>4.9 Classificação do curso</li>
                                     <li className="flex gap-2 items-center"><BsPeople size={18}  color={'#564FFD'}/>236,568 estudantes</li>
