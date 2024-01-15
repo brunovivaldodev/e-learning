@@ -11,9 +11,9 @@ import { IoLogoApple } from "react-icons/io";
 export default function SignUp() {
     return(
         <>
-            <header className="flex justify-between items-center mx-48 m-4">
+            <header className="flex justify-between items-center mx-[13%] m-[1%]">
                 <div className="flex items-center">
-                    <image className="mr-8">
+                    <image>
                         <Image src={logo} alt="logo" />
                     </image>
                 </div>
@@ -24,15 +24,15 @@ export default function SignUp() {
             </header>
 
             <hr />
-            <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+            <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen gap-2">
                 <div className="hidden md:flex items-center justify-center">
                     <image>
                         <Image src={sign} alt='presentation' />
                     </image>
                 </div>
 
-                <div className="flex justify-center items-center h-full -mt-[5%]">
-                    <form action="" className="">
+                <div className="flex justify-center items-center h-full -mt-[5%] w-[75%]">
+                    <form action="" className="w-full">
                         <h1 className="font-bold text-2xl mb-8 text-center">Crie a sua conta</h1>
                         <hr />
                         <div className="mt-4 flex flex-col space-y-2">

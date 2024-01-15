@@ -109,7 +109,7 @@ export default function SingleCourse(){
 
     return(
         <>
-            <Header></Header>
+            <Header avatarUrl="/pfp.webp"></Header>
             <div className="bg-gray-100">
                 <div className="flex gap-5">
                     <div>
