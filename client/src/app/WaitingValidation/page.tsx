@@ -1,11 +1,6 @@
 import imagem from '../../../public/admin.png'
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../public/logo.svg";
-import { IoPersonCircleOutline } from "react-icons/io5";
-import {
-     ShoppingCart, Bell, Heart
-} from "@phosphor-icons/react/dist/ssr";
 import Header from '../components/Header';
 
 export default function WaitingValidation() {

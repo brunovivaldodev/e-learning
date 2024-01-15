@@ -1,13 +1,10 @@
 'use client'
 
 import { useState } from 'react';
-import { Bell } from "@phosphor-icons/react/dist/ssr/Bell";
-import { Heart } from "@phosphor-icons/react/dist/ssr/Heart";
 import {
     CaretDown, CaretUp, ShoppingCart
 } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
-import logo from "../../../public/logo.svg";
 import Image from 'next/image'
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { GoArrowLeft } from "react-icons/go";
@@ -21,6 +18,7 @@ import imagem from '../../../public/watch.png'
 import Input from '../components/Input';
 import { IoPlay } from "react-icons/io5";
 import { IoChatbubblesOutline } from "react-icons/io5";
+import Header from '../components/Header';
 
 
 export default function Watch_Course() {
@@ -102,49 +100,7 @@ export default function Watch_Course() {
 
     return(
         <>
-            <header className="flex flex-col justify-between text-xs">
-                <nav className="flex justify-between p-4 bg-gray-800">
-                <div>
-                    <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/"}>Home</Link>
-                    <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/CourseList"}>Cursos</Link>
-                    <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/About"}>Sobre</Link>
-                    <Link className="p-4 text-gray-300 hover:text-orange-400" href={"BecomeInstructor"}>Torne-se um instrutor</Link>
-                </div>
-                <div>
-                    <a className="p-4 text-gray-300">USD</a>
-                    <a className="p-4 text-gray-300">English</a>
-                </div>
-                </nav>
-                <div className="flex p-3 justify-between">
-                <div className="flex">
-                    <image className="mr-8">
-                        <Image src={logo} alt="logo" />
-                    </image>
-                    <div className="flex gap-4">
-                    <input
-                        className="w-44 h-10 border-gray-800 border-2 outline-none pl-2"
-                        type="text"
-                        placeholder="Procurar"
-                    />
-                    <input
-                        className="w-72 h-10 border-gray-800 border-2 outline-none pl-2"
-                        type="text"
-                        placeholder="O que você quer aprender ..."
-                    />
-                    </div>
-                </div>
-                <div className="flex justify-between gap-4">
-                    <div className="flex gap-4 items-center">
-                    <Bell size={22} />
-                    <Heart size={22} />
-                    <ShoppingCart size={22} />
-                    </div>
-                    <div className="">
-                        <IoPersonCircleOutline size={35} color='#FF6636'/>
-                    </div>
-                </div>
-                </div>
-            </header>
+            <Header avatarUrl='/pfp.webp'></Header>
             <div className="flex justify-between items-center bg-gray-100 p-3">
 
                 <div>
@@ -154,7 +110,7 @@ export default function Watch_Course() {
                         </div>
 
                         <div className="space-y-2">
-                            <p className="text-sm">Design responsivo de site completo: do Figma ao Webflow e ao design do site</p>
+                            <Link href={'/Single_Course'} className="text-sm">Design responsivo de site completo: do Figma ao Webflow e ao design do site</Link>
                             <div className="flex space-x-3 text-xs text-gray-500">
                                 <ul className="text-xs flex items-center gap-1"><FaRegFolderOpen color='#FF6636'/> 6 secções</ul>
                                 <ul className="text-xs flex items-center gap-1"><LuPlayCircle color='#564FFD'/> 202 leituras</ul>
