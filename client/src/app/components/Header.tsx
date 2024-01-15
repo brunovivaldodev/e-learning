@@ -1,10 +1,11 @@
+'use client'
 import Image from "next/image";
 import logo from "../../../public/logo.svg";
 import { Bell } from "@phosphor-icons/react/dist/ssr/Bell";
 import { Heart } from "@phosphor-icons/react/dist/ssr/Heart";
 import {
   ShoppingCartSimple, MagnifyingGlass, CaretDown
-} from "@phosphor-icons/react/dist/ssr";
+} from "@phosphor-icons/react";
 import Button from './Button'
 import Button2 from './Button2'
 import Link from "next/link";
