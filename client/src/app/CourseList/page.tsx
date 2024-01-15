@@ -16,7 +16,7 @@ import {
 export default function CourseList() {
     return(
         <>
-            <Header/>
+            <Header avatarUrl="none"/>
             <hr />
             <section className="flex flex-col justify-between text-xs mx-48 pt-10 mb-20">
             <div className="flex flex-col w-full justify-center items-center">

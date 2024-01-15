@@ -9,23 +9,20 @@ import Button from './Button'
 import Button2 from './Button2'
 import Link from "next/link";
 
-interface HeaderProps {
-  avatarUrl: string;
-
-}
-
-export default function Header({ avatarUrl }: HeaderProps) {
-  return (
-
-    <header className="border-b border-gray-200">
-
-      <div className="flex justify-between bg-gray-900 items-center">
-
-        <nav className="p-2">
-          <a href="/" className="text-[10px] text-white hover:text-orange-400 m-2">Home</a>
-          <a href="/CourseList" className="text-[10px] text-white hover:text-orange-400 m-2">Cursos</a>
-          <a href="/About" className="text-[10px] text-white hover:text-orange-400 m-2">Sobre</a>
-          <a href="" className="text-[10px] text-white hover:text-orange-400 m-2">Contactos</a>
+export default function Header(){
+  return(
+    <header className="flex flex-col justify-between text-xs">
+        <nav className="flex justify-between p-4 bg-gray-800">
+          <div>
+            <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/"}>Home</Link>
+            <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/CourseList"}>Cursos</Link>
+            <Link className="p-4 text-gray-300 hover:text-orange-400" href={"/About"}>Sobre</Link>
+            <Link className="p-4 text-gray-300 hover:text-orange-400" href={"BecomeInstructor"}>Torne-se um instrutor</Link>
+          </div>
+          <div>
+            <a className="p-4 text-gray-300">USD</a>
+            <a className="p-4 text-gray-300">English</a>
+          </div>
         </nav>
 
         <div className="items-center">

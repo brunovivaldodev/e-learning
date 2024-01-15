@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from 'react';
-import Image from "next/image";
-import pfp from "../../../public/pfp.webp";
 import {
     Faders, Star, ArrowLeft, User, ArrowRight, MagnifyingGlass, Cpu, Handshake, CreditCard,
     ChartBarHorizontal, BugDroid, PenNib, Megaphone, Package, Camera, Headset, FirstAidKit,
@@ -14,9 +12,10 @@ import Curso from '../../components/Curso3';
 import Input from '../../components/Input';
 import { Slider } from "@nextui-org/react";
 
+
 export default function Courses_List_Filter() {
 
-    const [categoriasVisible, setCategoriasVisible] = useState(false);
+    const [categoriasVisible, setCategoriasVisible] = useState(true);
     const [ferramentasVisible, setFerramentasVisible] = useState(true);
     const [classificacaoVisible, setClassificacaoVisible] = useState(true);
     const [nivelVisible, setNivelVisible] = useState(true);
@@ -39,9 +38,8 @@ export default function Courses_List_Filter() {
     ];
 
     const precos = [
-        { id: 0, name: 'Todos', isChecked: true, students: 300 },
-        { id: 1, name: 'Pago', isChecked: false, students: 200 },
-        { id: 2, name: 'Grátis', isChecked: false, students: 100 },
+        { id: 0, name: 'Pago', isChecked: false, students: 200 },
+        { id: 1, name: 'Grátis', isChecked: false, students: 100 },
     ];
 
     const duracoes = [
@@ -124,9 +122,10 @@ export default function Courses_List_Filter() {
 
     return (
 
+
         <div>
 
-            <Header></Header>
+            <Header avatarUrl='none'></Header>
 
             <div className="bg-white justify-center">
 
@@ -324,6 +323,8 @@ export default function Courses_List_Filter() {
 
                             </div>
 
+
+
                             <div className="border border-gray-100 mt-5">
 
                                 <div className="flex justify-between items-center p-2" onClick={togglePreco} >
@@ -334,16 +335,6 @@ export default function Courses_List_Filter() {
                                 {precoVisible && (
 
                                     <div id="preco" className='p-2'>
-
-                                        <Slider
-                                            label="Price Range"
-                                            step={50}
-                                            minValue={0}
-                                            maxValue={1000}
-                                            defaultValue={[100, 500]}
-                                            formatOptions={{ style: "currency", currency: "USD" }}
-                                            className="max-w-md"
-                                        />
 
                                         {precosStates.map(({ id, name, isChecked, students }) => (
                                             <div key={id} className='flex justify-between items-center mb-2'>
@@ -360,6 +351,7 @@ export default function Courses_List_Filter() {
 
 
                             </div>
+
 
                             <div className="border border-gray-100 mt-5">
 
@@ -453,5 +445,6 @@ export default function Courses_List_Filter() {
             <Footer></Footer>
 
         </div>
+
     );
 }
