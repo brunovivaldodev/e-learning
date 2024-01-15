@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function SignIn() {
     return(
         <>
-            <header className="flex justify-between items-center mx-48 m-4">
+            <header className="flex justify-between items-center mx-[13%] m-[1%]">
                 <div className="flex items-center">
                     <image className="mr-8">
                         <Image src={logo} alt="logo" />
@@ -23,15 +23,15 @@ export default function SignIn() {
             </header>
 
             <hr />
-            <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+            <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen gpa-2">
                 <div className="hidden md:flex items-center justify-center">
                     <image>
                         <Image src={sign} alt='presentation' />
                     </image>
                 </div>
 
-                <div className="flex justify-center items-center h-full -mt-[5%]">
-                    <form action="" className="w-[60%]">
+                <div className="flex justify-center items-center h-full -mt-[7%] w-[100%]">
+                    <form action="" className="">
                         <h1 className="font-bold text-2xl mb-8 text-center">Faça login na sua conta</h1>
                         <hr />
                         <div className="mt-4 flex flex-col space-y-2">
@@ -57,7 +57,7 @@ export default function SignIn() {
                             <button className="text-white text-sm bg-laranja p-2 rounded-lg flex justify-between items-center gap-2 px-10"><Link href={'/Student'}>Entrar</Link> <GoArrowRight/></button>
                         </div>
                         
-                        <div className="flex justify-between text-xs mt-10">
+                        <div className="flex justify-between text-xs mt-10 gap-5">
                             
                             <button className="border-gray-400 border-2 rounded-lg p-2 flex justify-between items-center gap-4 px-6"><FcGoogle size={16} className='-ml-4'/> <hr className="h-4 border-l border-gray-400"/> Google</button>
                             <button className="border-gray-400 border-2 rounded-lg p-2 flex justify-between items-center gap-4 px-6"><FaFacebookF size={16} color='blue'className='-ml-4'/> <hr className="h-4 border-l border-gray-400"/> Facebook</button>
