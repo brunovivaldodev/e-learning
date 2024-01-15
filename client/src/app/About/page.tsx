@@ -28,7 +28,7 @@ import {
 export default function About() {
     return(
         <div>
-            <Header avatarUrl="none"/>
+            <Header avatarUrl="/pfp.webp"/>
             
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="flex flex-col items-center p-24">
