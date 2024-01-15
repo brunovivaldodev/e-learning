@@ -1,10 +1,11 @@
+'use client'
 import Image from "next/image";
 import logo from "../../../public/logo.svg";
 import { Bell } from "@phosphor-icons/react/dist/ssr/Bell";
 import { Heart } from "@phosphor-icons/react/dist/ssr/Heart";
 import {
   ShoppingCartSimple, MagnifyingGlass, CaretDown
-} from "@phosphor-icons/react/dist/ssr";
+} from "@phosphor-icons/react";
 import Button from './Button'
 import Button2 from './Button2'
 import Link from "next/link";
@@ -23,8 +24,8 @@ export default function Header({ avatarUrl }: HeaderProps) {
 
         <nav className="p-2">
           <a href="/" className="text-[10px] text-white hover:text-orange-400 m-2">Home</a>
-          <a href="CourseList" className="text-[10px] text-white hover:text-orange-400 m-2">Cursos</a>
-          <a href="About" className="text-[10px] text-white hover:text-orange-400 m-2">Sobre</a>
+          <a href="/CourseList" className="text-[10px] text-white hover:text-orange-400 m-2">Cursos</a>
+          <a href="/About" className="text-[10px] text-white hover:text-orange-400 m-2">Sobre</a>
           <a href="" className="text-[10px] text-white hover:text-orange-400 m-2">Contactos</a>
         </nav>
 
@@ -71,8 +72,8 @@ export default function Header({ avatarUrl }: HeaderProps) {
           ) : (
 
             <div className="flex">
-              <Link href="SignUp"><Button buttonText="Criar Conta" /></Link>
-              <Link href="SignIn"><Button2 buttonText="Entrar" /></Link> 
+              <a href="SignUp"><Button buttonText="Criar Conta" /></a>
+              <a href="SignIn"><Button2 buttonText="Entrar" /></a> 
             </div>
 
           )}

@@ -6,10 +6,10 @@ import {
     ChartBarHorizontal, BugDroid, PenNib, Megaphone, Package, Camera, Headset, FirstAidKit,
     CaretDown, CaretUp, Receipt
 } from "@phosphor-icons/react/dist/ssr";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import Curso from '../../components/Curso3';
-import Input from '../../components/Input';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Curso from '../components/Curso3';
+import Input from '../components/Input';
 import { Slider } from "@nextui-org/react";
 
 
