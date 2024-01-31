@@ -101,19 +101,42 @@ class InstructorControllers {
       return new AppError("Instructor Does Not Exists", 400);
     }
 
-    instructorExists.avatarUrl = avatarUrl;
-    instructorExists.description = description;
-    instructorExists.title = title;
-    instructorExists.social_profiles = social_profiles || {};
+    instructorExists.avatarUrl = avatarUrl || instructorExists.avatarUrl;
+    instructorExists.description = description || instructorExists.description;
+    instructorExists.title = title || instructorExists.title;
 
     return await this.databaseInstructor.prisma.instructor.update({
       where: { id: instructorId },
-      data: { ...instructorExists, social_profiles: {} },
+      data: { ...instructorExists, social_profiles: social_profiles || {} },
     });
   }
 
   async findById(id: string) {
     return await this.databaseInstructor.findByID(id);
+  }
+
+  async findWithCourse(id: string) {
+    return await this.databaseInstructor.prisma.instructor.findUnique({
+      where: { id },
+      include: { Courses: true },
+    });
+  }
+
+  async findCourse(courseID: string) {
+    return await this.databaseInstructor.prisma.courses.findFirst({
+      where: {
+        id: courseID,
+      },
+      include: { instructor: true },
+    });
+  }
+
+  async listCourses(instructorId: string) {
+    return await this.databaseInstructor.prisma.courses.findMany({
+      where: {
+        instructor_id: instructorId,
+      },
+    });
   }
 }
 

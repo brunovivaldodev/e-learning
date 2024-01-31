@@ -1,14 +1,17 @@
 "use client";
 import { BreadcrumbItem, Breadcrumbs as Bread } from "@nextui-org/react";
+type Props = {
+  categorie: string;
+  course: string;
+};
 
-export function Breadcrums() {
+export function Breadcrums({ categorie, course }: Props) {
   return (
     <Bread separator={"/"}>
       <BreadcrumbItem>Curso</BreadcrumbItem>
       <BreadcrumbItem>Meus Cursos</BreadcrumbItem>
-      <BreadcrumbItem>Desenvolvimento</BreadcrumbItem>
-      <BreadcrumbItem>Desenvolvimento Web</BreadcrumbItem>
-      <BreadcrumbItem>React Curso Completo</BreadcrumbItem>
+      <BreadcrumbItem>{categorie}</BreadcrumbItem>
+      <BreadcrumbItem>{course}</BreadcrumbItem>
     </Bread>
   );
 }

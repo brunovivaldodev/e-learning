@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { randomUUID as uuidV4 } from "crypto";
+import { transformLessons } from "../helpers/desctructe";
 
 export interface ICreateCourse {
   price: number;
@@ -12,9 +13,13 @@ export interface ICreateCourse {
   language: string;
   level: string;
   subtitle: string;
-  topic: string;
   thumbnail: string;
   trailer_url: string;
+  targetAudience: string[];
+  requirements: string[];
+  lessons: string[];
+  sections: string[];
+  lessonsArray: Record<string, Express.Multer.File[]>;
 }
 
 export class DatabaseCourse {
@@ -31,11 +36,15 @@ export class DatabaseCourse {
     language,
     level,
     subtitle,
-    topic,
     thumbnail,
     trailer_url,
+    lessons,
+    requirements,
+    targetAudience,
+    sections,
+    lessonsArray,
   }: ICreateCourse) {
-    return await this.prisma.courses.create({
+    const course = await this.prisma.courses.create({
       data: {
         price: Number(price),
         categories,
@@ -47,7 +56,9 @@ export class DatabaseCourse {
         subtitle,
         thumbnail,
         title,
-        topic,
+        lessons,
+        requirements,
+        target_audience: targetAudience,
         trailer: trailer_url,
         instructor_id,
         id: uuidV4(),
@@ -55,11 +66,44 @@ export class DatabaseCourse {
         updated_at: new Date(),
       },
     });
+
+    const transformedLessons = transformLessons(lessonsArray);
+
+    sections.forEach(async (element, index) => {
+      await this.prisma.course_Section.create({
+        data: {
+          name: element,
+          id: uuidV4(),
+          created_at: new Date(),
+          updated_at: new Date(),
+          course_id: course.id,
+          lecture: {
+            createMany: {
+              data: transformedLessons[index],
+            },
+          },
+        },
+      });
+    });
+
+    // const t = await this.prisma.course_Section.upsert({ create: {} });
   }
 
   async findByID(id: string) {
     return await this.prisma.courses.findUnique({
       where: { id },
+    });
+  }
+
+  async getById(id: string) {
+    return await this.prisma.courses.findUnique({
+      where: { id },
+      include: {
+        instructor: true,
+        course_section: {
+          include: { lecture: true },
+        },
+      },
     });
   }
 }

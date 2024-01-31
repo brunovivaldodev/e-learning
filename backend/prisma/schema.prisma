@@ -42,11 +42,11 @@ model Instructor {
   name            String
   email           String
   password        String
-  description     String
+  description     String?
   avatarUrl       String?
-  title           String
+  title           String?
   decision        String
-  social_profiles Json
+  social_profiles Json?
   created_at      DateTime
   updated_at      DateTime
   Courses         Courses[]
@@ -59,7 +59,6 @@ model Courses {
   title           String
   subtitle        String
   categories      String
-  topic           String
   language        String
   level           String
   duration        String
@@ -71,9 +70,9 @@ model Courses {
   instructor_id   String
   instructor      Instructor       @relation(fields: [instructor_id], references: [id])
   lessons         String[]
-  target_Audience String[]
+  target_audience String[]
   requirements    String[]
-  Course_Section  Course_Section[]
+  course_section  Course_Section[]
   purchases       Purchases[]
   created_at      DateTime
   updated_at      DateTime
@@ -96,7 +95,7 @@ model Course_Section {
 model Lecture {
   id                String         @id()
   course_section_id String
-  course_Section    Course_Section @relation(fields: [course_section_id], references: [id])
+  course_section    Course_Section @relation(fields: [course_section_id], references: [id])
   name              String
   type              String
   url               String
@@ -126,6 +125,7 @@ model Purchases {
   student    Student  @relation(fields: [student_id], references: [id])
   course_id  String
   course     Courses  @relation(fields: [course_id], references: [id])
+  state      String
   created_at DateTime
   updated_at DateTime
 

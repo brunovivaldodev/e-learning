@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { randomUUID as uuidV4 } from "crypto";
+import { State } from "./contracts";
 
 export interface ICreatePurchase {
   courseId: string;
@@ -15,6 +16,7 @@ export class DatabasePurchase {
         id: uuidV4(),
         course_id: courseId,
         student_id: studentId,
+        state: State.Values.Fazendo,
         created_at: new Date(),
         updated_at: new Date(),
       },

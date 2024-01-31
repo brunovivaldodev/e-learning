@@ -1,68 +1,32 @@
-'use client'
-import { useState } from 'react';
-import { PlayCircle, Trophy, CheckSquareOffset, Users, ArrowRight, ArrowLeft } from "@phosphor-icons/react/dist/ssr";
-import Tab from "../components/Tab";
-import Footer from "../components/Footer";
-import ProfileInfo from "../components/ProfileInfo";
-import Dashboard from "../Student/components/Dashboard";
-import Cursos from "../Student/components/Cursos";
-import History from "../Student/components/History";
-import Instrutores from "../Student/components/Instrutores";
-import Wishlist from "../Student/components/Wishlist";
-import Settings from "../Student/components/Settings";
-import Header2 from "../components/Header";
+import Footer from "../../components/Footer";
+import ProfileInfo from "../../components/ProfileInfo";
+import Header from "../../components/Header";
+import StudentsTabs from "@/components/students-tab";
+import { getStudent } from "@/contexts/auth";
+import { api } from "@/lib/api";
 
-export default function Student() {
+export default async function Student() {
+  const userAuth = getStudent();
 
-    const user = {avatarUrl:"/pfp.webp", name:"Verónica Ramos", description:'Trying to be better everyday'};
+  const res = await api.get(`/students/${userAuth?.sub}`);
 
-    const [tab, setTab] = useState("Painel");
+  const purchases = res.data;
 
-    const handleTabClick = (newTab: string) => {
-        setTab(newTab);
-    };
+  return (
+    <div>
+      <Header user={userAuth}></Header>
 
-    const renderComponent = () => {
-        switch (tab) {
-            case "Painel":
-                return <Dashboard name={user.name.split(' ')[0]}  />;
-            case "Cursos":
-                return <Cursos />;
-            case "Instrutores":
-                return <Instrutores />;
-            case "Wishlist":
-                return <Wishlist />;
-            case "Definições":
-                return <Settings />;
-            case "Histórico":
-                return <History />;
-            default:
-                return null; 
-        }
-    };
+      <div className="flex flex-col bg-white justify-center items-center">
+        <ProfileInfo
+          pfp={purchases.avatarUrl}
+          name={purchases.name}
+          description={purchases.description}
+        ></ProfileInfo>
 
-    return (
+        <StudentsTabs students={purchases} />
+      </div>
 
-        <div >
-
-            <Header2 avatarUrl="/pfp.webp"></Header2>
-
-            <div className="flex flex-col bg-white justify-center items-center">
-
-                <ProfileInfo pfp={user.avatarUrl} name={user.name} description={user.description}></ProfileInfo>
-
-                <Tab activeTab={tab} onTabClick={handleTabClick}></Tab>
-
-                <div className="flex flex-col w-3/4 bg-white mb-20">
-
-                    {renderComponent()}
-
-                </div>
-
-            </div>
-
-            <Footer></Footer>
-
-        </div>
-    );
+      <Footer></Footer>
+    </div>
+  );
 }

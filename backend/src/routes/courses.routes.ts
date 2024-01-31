@@ -6,7 +6,10 @@ import {
   ensureStudentAuthenticated,
 } from "./middlewares";
 import { CourseControllers } from "../controllers/courses.controllers";
-import { destructureObject } from "../helpers/desctructe";
+import {
+  findFileByFieldname,
+  organizeLessonsByNumber,
+} from "../helpers/desctructe";
 import { PurchaseControllers } from "../controllers";
 
 const router = Router();
@@ -19,11 +22,10 @@ const uploadAvatar = multer(uploadConfig("./uploads"));
 router.post(
   "/",
   ensureInstructorAuthenticated,
-  uploadAvatar.fields([
-    { name: "thumbnail", maxCount: 1 },
-    { name: "trailer", maxCount: 1 },
-  ]),
+  uploadAvatar.any(),
   async (request, response) => {
+    const files = request.files as Express.Multer.File[];
+
     const { id } = request.user;
 
     const {
@@ -35,10 +37,11 @@ router.post(
       level,
       price,
       subtitle,
-      topic,
+      targetAudience,
+      requirements,
+      lessons,
+      sections,
     } = request.body;
-
-    const fields = destructureObject(request.files);
 
     const course = await coursesController.create({
       description,
@@ -50,9 +53,13 @@ router.post(
       level,
       price,
       subtitle,
-      thumbnail: fields.thumbnail.filename,
-      topic,
-      trailer_url: fields.trailer.filename,
+      thumbnail: findFileByFieldname("thumbnail", files)?.filename as string,
+      trailer_url: findFileByFieldname("trailer", files)?.filename as string,
+      sections: sections.split(","),
+      lessonsArray: organizeLessonsByNumber(files),
+      targetAudience: targetAudience.split(","),
+      requirements: requirements.split(","),
+      lessons: lessons.split(","),
     });
 
     return response.json(course);

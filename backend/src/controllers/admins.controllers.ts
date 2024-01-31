@@ -38,6 +38,7 @@ class AdminControllers {
     const token = sign(
       {
         name: admin.name,
+        email: admin.email,
       },
       config.secret_token,
       {
@@ -65,6 +66,7 @@ class AdminControllers {
     const token = sign(
       {
         name: adminExists.name,
+        email: adminExists.email,
       },
       config.secret_token,
       {
@@ -78,6 +80,22 @@ class AdminControllers {
 
   async findById(id: string) {
     return await this.databaseAdmin.findByID(id);
+  }
+
+  async getPendingCourses() {
+    return await this.databaseAdmin.prisma.courses.findMany({
+      where: {
+        decision: Decision.Values.Pendente,
+      },
+    });
+  }
+
+  async getPendingInstructors() {
+    return await this.databaseAdmin.prisma.instructor.findMany({
+      where: {
+        decision: Decision.Values.Pendente,
+      },
+    });
   }
 
   async aproveInstructor(instructorId: string, decision: string) {

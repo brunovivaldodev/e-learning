@@ -1,8 +1,6 @@
 import { Card } from "@/components/card";
 import { AreaChart } from "@/components/area-chart";
-import { LineChart } from "@/components/line-chart";
 import { Header } from "@/components/header";
-import { Evaluation } from "@/components/evaluation";
 import card from "../../../public/Cards.svg";
 import Image from "next/image";
 import {
@@ -18,10 +16,10 @@ export default function Earnings() {
       <Header page="Ganhos" />
       <div className="mx-28 space-y-8">
         <section className="grid grid-cols-4 gap-4">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card title="Rendimento total" total={50} />
+          <Card title="Saldo total" total={30} />
+          <Card title="Retiradas totais" total={19} />
+          <Card title="Retiradas hoje" total={50} />
         </section>
         <section className="flex flex-col gap-8">
           <div className="flex gap-6">

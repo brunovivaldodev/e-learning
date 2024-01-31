@@ -2,6 +2,7 @@ import { Router } from "express";
 import { InstructorControllers } from "../controllers";
 import uploadConfig from "../config/upload";
 import multer from "multer";
+import { ensureInstructorAuthenticated } from "./middlewares";
 
 const router = Router();
 
@@ -35,11 +36,12 @@ router.post("/", async (request, response) => {
 
 router.put(
   "/:id",
+  ensureInstructorAuthenticated,
   uploadAvatar.single("avatar_url"),
   async (request, response) => {
     const { id } = request.params;
 
-    const { title, decision, description, social_profiles } = request.body;
+    const { title, description, social_profiles } = request.body;
 
     const avatarUrl = request.file?.filename;
 
@@ -66,11 +68,33 @@ router.post("/login", async (request, response) => {
   return response.json(instructorToken);
 });
 
+router.get(
+  "/courses",
+  ensureInstructorAuthenticated,
+  async (request, response) => {
+    const { id } = request.user;
+
+    const courses = await instructorsController.listCourses(id);
+    return response.json(courses);
+  }
+);
+
+router.get(
+  "/courses/:id",
+  ensureInstructorAuthenticated,
+  async (request, response) => {
+    const { id } = request.params;
+
+    const course = await instructorsController.findCourse(id);
+    return response.json(course);
+  }
+);
+
 router.get("/:id", async (request, response) => {
   const { id } = request.params;
 
   const instructors = await instructorsController.findById(id);
-  return response.json({ instructors });
+  return response.json(instructors);
 });
 
 export default router;

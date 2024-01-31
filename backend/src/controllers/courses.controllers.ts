@@ -32,8 +32,12 @@ class CourseControllers {
     subtitle,
     thumbnail,
     title,
-    topic,
     trailer_url,
+    lessons,
+    requirements,
+    targetAudience,
+    lessonsArray,
+    sections,
   }: CreateCourseDTO) {
     const instructorExists = await this.databaseInstructor.findByID(
       instructor_id
@@ -72,8 +76,12 @@ class CourseControllers {
       subtitle,
       thumbnail,
       title,
-      topic,
       trailer_url,
+      lessons,
+      requirements,
+      targetAudience,
+      lessonsArray,
+      sections,
     });
 
     return { course };
@@ -107,7 +115,6 @@ class CourseControllers {
     courseExists.decision = decision || courseExists.decision;
     courseExists.duration = duration || courseExists.duration;
     courseExists.language = language || courseExists.language;
-    courseExists.topic = topic || courseExists.topic;
     courseExists.price = price || courseExists.price;
     courseExists.subtitle = subtitle || courseExists.subtitle;
     courseExists.thumbnail = thumbnail || courseExists.thumbnail;
@@ -124,6 +131,9 @@ class CourseControllers {
     return await this.databaseCourse.findByID(id);
   }
 
+  async getById(id: string) {
+    return await this.databaseCourse.getById(id);
+  }
   async purchase({ courseId, studentId }: CreatePurchaseDTO) {
     const studentExists = this.databaseStudent.findByID(studentId);
 
@@ -142,6 +152,20 @@ class CourseControllers {
     });
 
     return { purchase };
+  }
+
+  async findMany() {
+    const courses = await this.databaseCourse.prisma.courses.findMany();
+
+    return courses;
+  }
+
+  async getRecents() {
+    const recents = await this.databaseCourse.prisma.courses.findMany({
+      take: 4,
+    });
+
+    return recents;
   }
 }
 

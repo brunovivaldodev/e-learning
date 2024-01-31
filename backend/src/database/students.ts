@@ -35,6 +35,13 @@ export class DatabaseStudent {
   async findByID(id: string) {
     return await this.prisma.student.findUnique({
       where: { id },
+      include: {
+        purchases: {
+          include: {
+            course: true,
+          },
+        },
+      },
     });
   }
 }

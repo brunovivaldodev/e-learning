@@ -1,10 +1,11 @@
 import { Router } from "express";
-import { AdminControllers } from "../controllers";
+import { AdminControllers, CourseControllers } from "../controllers";
 import { ensureAdminAuthenticated } from "./middlewares";
 
 const router = Router();
 
 const adminController = new AdminControllers();
+const courseController = new CourseControllers();
 
 router.post("/", async (request, response) => {
   const { name, email, password, confirmationPassword } = request.body;
@@ -30,6 +31,28 @@ router.post("/login", async (request, response) => {
   return response.json(adminToken);
 });
 
+router.get(
+  "/instructors",
+  ensureAdminAuthenticated,
+
+  async (request, response) => {
+    const instructors = await adminController.getPendingInstructors();
+
+    return response.json(instructors);
+  }
+);
+
+router.get(
+  "/courses",
+  ensureAdminAuthenticated,
+
+  async (request, response) => {
+    const instructors = await adminController.getPendingCourses();
+
+    return response.json(instructors);
+  }
+);
+
 router.get("/:id", async (request, response) => {
   const { id } = request.params;
 
@@ -38,7 +61,7 @@ router.get("/:id", async (request, response) => {
 });
 
 router.post(
-  "/course/:courseId",
+  "/courses/:courseId",
   ensureAdminAuthenticated,
 
   async (request, response) => {
@@ -51,8 +74,21 @@ router.post(
   }
 );
 
+router.get(
+  "/courses/:courseId",
+  ensureAdminAuthenticated,
+
+  async (request, response) => {
+    const { courseId } = request.params;
+
+    const course = await courseController.getById(courseId);
+
+    return response.json(course);
+  }
+);
+
 router.post(
-  "/instructor/:instructorId",
+  "/instructors/:instructorId",
   ensureAdminAuthenticated,
 
   async (request, response) => {

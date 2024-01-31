@@ -9,6 +9,10 @@ export interface CreateCourseDTO {
   subtitle: string;
   thumbnail: string;
   title: string;
-  topic: string;
   trailer_url: string;
+  targetAudience: string[];
+  requirements: string[];
+  lessons: string[];
+  sections: string[];
+  lessonsArray: Record<string, Express.Multer.File[]>;
 }

@@ -43,6 +43,7 @@ export async function ensureAdminAuthenticated(
       id: admin.id,
       name: admin.name,
       avatarUrl: null,
+      email: admin.email,
     };
     next();
   } catch (error) {
@@ -79,6 +80,7 @@ export async function ensureInstructorAuthenticated(
     request.user = {
       id: instructor.id,
       name: instructor.name,
+      email: instructor.email,
       avatarUrl: instructor.avatarUrl,
     };
     next();
@@ -116,6 +118,7 @@ export async function ensureStudentAuthenticated(
     request.user = {
       id: student.id,
       name: student.name,
+      email: student.email,
       avatarUrl: student.avatarUrl,
     };
     next();

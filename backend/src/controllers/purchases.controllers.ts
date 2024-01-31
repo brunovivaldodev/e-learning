@@ -10,17 +10,26 @@ class PurchaseControllers {
   readonly databaseCourse = new DatabaseCourse();
 
   async create({ courseId, studentId }: CreatePurchaseDTO) {
-    const studentExists = this.databaseStudent.findByID(studentId);
+    const studentExists = await this.databaseStudent.findByID(studentId);
 
     if (!studentExists) {
-      throw new AppError("Student not exists");
+      return new AppError("Student not exists");
     }
 
-    const courseExists = this.databaseCourse.findByID(courseId);
+    const courseExists = await this.databaseCourse.findByID(courseId);
 
     if (!courseExists) {
-      throw new AppError("course not exists");
+      return new AppError("course not exists");
     }
+
+    const purchaseExist = await this.databaseCourse.prisma.purchases.findFirst({
+      where: { course_id: courseId, student_id: studentId },
+    });
+
+    if (purchaseExist) {
+      return new AppError("Curso já pago. Por favor acesse o seu perfíl");
+    }
+
     const purchase = await this.databasePurchase.create({
       courseId,
       studentId,

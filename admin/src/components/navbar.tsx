@@ -1,11 +1,4 @@
-import {
-  ChartBar,
-  ChatCircleDots,
-  CreditCard,
-  Gear,
-  PlusCircle,
-  Stack,
-} from "@phosphor-icons/react/dist/ssr";
+import { ChartBar, Gear, Stack } from "@phosphor-icons/react/dist/ssr";
 import Logo from "../../public/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,9 +8,8 @@ export function NavBar() {
       <div className="fixed">
         <figure>
           <Image className="ml-4" src={Logo} alt="" />
-          <div className="border mt-4 border-gray-700"></div>
+          <div className="border w-48 mt-4 border-gray-700"></div>
         </figure>
-
         <Link
           href={"/"}
           className="flex text-white p-4 space-x-2 hover:bg-orange-500 mt-4"
@@ -27,34 +19,21 @@ export function NavBar() {
         </Link>
 
         <Link
-          href={"/courses/new"}
-          className="flex text-white p-4 space-x-2 hover:bg-orange-500"
-        >
-          <PlusCircle size={24} />
-          <p>Criar novo curso</p>
-        </Link>
-
-        <Link
           href={"/courses"}
           className="flex text-white p-4 space-x-2 hover:bg-orange-500"
         >
           <Stack size={24} />
-          <p>Meus cursos</p>
+          <p>Cursos Pendentes</p>
         </Link>
+
         <Link
-          href={"/earnings"}
+          href={"/instructors"}
           className="flex text-white p-4 space-x-2 hover:bg-orange-500"
         >
-          <CreditCard size={24} />
-          <p>Ganhos</p>
+          <Stack size={24} />
+          <p>Instructores Pendentes</p>
         </Link>
-        <Link
-          href={"/mensages"}
-          className="flex text-white p-4 space-x-2 hover:bg-orange-500"
-        >
-          <ChatCircleDots size={24} />
-          <p>Mensagens</p>
-        </Link>
+
         <Link
           href={"/settings"}
           className="flex text-white p-4 space-x-2 hover:bg-orange-500"

@@ -20,4 +20,6 @@ const Language = z.enum(["Português", "Inglês", "Francês"]);
 
 const Level = z.enum(["Iniciante", "Intermediário", "Avançado"]);
 
-export { Level, Decision, Duration, Categories, Language };
+const State = z.enum(["Fazendo", "Terminado"]);
+
+export { Level, Decision, Duration, Categories, Language, State };

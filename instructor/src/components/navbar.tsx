@@ -1,6 +1,5 @@
 import {
   ChartBar,
-  ChatCircleDots,
   CreditCard,
   Gear,
   PlusCircle,
@@ -47,13 +46,6 @@ export function NavBar() {
         >
           <CreditCard size={24} />
           <p>Ganhos</p>
-        </Link>
-        <Link
-          href={"/mensages"}
-          className="flex text-white p-4 space-x-2 hover:bg-orange-500"
-        >
-          <ChatCircleDots size={24} />
-          <p>Mensagens</p>
         </Link>
         <Link
           href={"/settings"}
