@@ -176,30 +176,14 @@ export default function LandingPage() {
                     </div>
 
                     <div className="flex items-center ml-4  w-1/2 grid grid-cols-4 gap-4">
-                        <image>
-                            <Image src={total} alt="total" />
-                        </image>
-                        <image>
-                            <Image src={chevron} alt="google" />
-                        </image>
-                        <image>
-                            <Image src={sonangol} alt="google" />
-                        </image>
-                        <image>
-                            <Image src={unitel} alt="unitel" />
-                        </image>
-                        <image>
-                            <Image src={baker} alt="total" />
-                        </image>
-                        <image>
-                            <Image src={sistec} alt="google" />
-                        </image>
-                        <image>
-                            <Image src={ncr} alt="google" />
-                        </image>
-                        <image>
-                            <Image src={bai} alt="unitel" />
-                        </image>
+                        <Image src={total} alt="total" />
+                        <Image src={chevron} alt="google" />
+                        <Image src={sonangol} alt="google" />
+                        <Image src={unitel} alt="unitel" />
+                        <Image src={baker} alt="total" />
+                        <Image src={sistec} alt="google" />
+                        <Image src={ncr} alt="google" />
+                        <Image src={bai} alt="unitel" />
                     </div>
 
                 </div>
