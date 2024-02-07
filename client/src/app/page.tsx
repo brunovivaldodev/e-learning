@@ -119,23 +119,23 @@ export default async function LandingPage() {
             title="Curso De Python"
             categorie="Desenvolvimento"
             coments={50}
-            price={50000}
-            students={70}
+            price={70000}
+            students={77}
             thumb="course"
           ></TrendingCourse>
           <TrendingCourse
             title="Curso De Java"
             categorie="Desenvolvimento"
             coments={50}
-            price={50000}
-            students={70}
+            price={60000}
+            students={93}
             thumb="course"
           ></TrendingCourse>{" "}
           <TrendingCourse
             title="Curso de Marketing"
             categorie="Marketing"
             coments={50}
-            price={50000}
+            price={25000}
             students={70}
             thumb="course"
           ></TrendingCourse>{" "}
@@ -143,14 +143,14 @@ export default async function LandingPage() {
             title="Curso De Design"
             categorie="Design"
             coments={50}
-            price={50000}
+            price={35000}
             students={70}
             thumb="course"
           ></TrendingCourse>{" "}
           <TrendingCourse
             title="Curso De Contabilidade"
             categorie="Contabilidade"
-            coments={50}
+            coments={8}
             price={50000}
             students={70}
             thumb="course"
@@ -158,25 +158,25 @@ export default async function LandingPage() {
           <TrendingCourse
             title="Curso De Go"
             categorie="Desenvolvimento"
-            coments={50}
-            price={50000}
+            coments={25}
+            price={45000}
             students={70}
             thumb="course"
           ></TrendingCourse>{" "}
           <TrendingCourse
             title="Curso De Estatisitica"
             categorie="Estatisitica"
-            coments={50}
-            price={50000}
-            students={70}
+            coments={10}
+            price={25000}
+            students={150}
             thumb="course"
           ></TrendingCourse>{" "}
           <TrendingCourse
             title="Curso De Modelação"
             categorie="Diverso"
-            coments={50}
-            price={50000}
-            students={70}
+            coments={5}
+            price={25000}
+            students={30}
             thumb="course"
           ></TrendingCourse>
         </div>
@@ -210,41 +210,34 @@ export default async function LandingPage() {
       </div>
 
       <div
-        className="flex w-full items-center pt-10 flex-col pb-10"
+        className="flex flex-col justify-center items-center mt-5 mx-20"
         style={{ backgroundColor: "#F5F7FA" }}
       >
-        <div className="flex flex-col bg-white w-3/4 items-center">
+        <div className="flex w-full flex-col bg-white items-center">
           <p className="text-3xl font-semibold mb-5 mt-10">
             Melhores instrutores do Mês
           </p>
 
-          <div className="flex w-4/5">
+          <div className="flex w-full mx-20 items-center justify-center">
             <Instrutor
               avatarUrl="/instrutor.png"
-              name="Francisca Tungumuna"
-              description="Empreendedora"
+              name="Sediangani Sofrimento"
+              description="Desenvolvedor Web"
               stars={5.0}
-              students={187}
+              students={100}
             />
             <Instrutor
-              avatarUrl="/instrutor.png"
+              avatarUrl="/inscrutor3.png"
               name="Francisca Tungumuna"
               description="Empreendedora"
-              stars={5.0}
-              students={187}
+              stars={4.9}
+              students={134}
             />
             <Instrutor
-              avatarUrl="/instrutor.png"
-              name="Francisca Tungumuna"
-              description="Empreendedora"
-              stars={5.0}
-              students={187}
-            />
-            <Instrutor
-              avatarUrl="/instrutor.png"
-              name="Francisca Tungumuna"
-              description="Empreendedora"
-              stars={5.0}
+              avatarUrl="/inscrutor2.png"
+              name="Judson Paiva"
+              description="Desenvolvedor Mobile"
+              stars={4.0}
               students={187}
             />
           </div>

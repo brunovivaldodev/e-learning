@@ -106,9 +106,10 @@ export default function BecomeI() {
         <div className="flex flex-col space-y-3 mx-16 text-sm">
           <h2 className="text-4xl">Porque usar a plataforma?</h2>
           <div className="text-gray-500">
-            Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus
-            non turpis scelerisque, vitae auctor arcu ornare. Cras vitae nulla a
-            purus mollis venenatis.{" "}
+            Nossa plataforma oferece eficiência e inovação, proporcionando uma
+            experiência de fácil aprendizado, personalizada e segura. Economize
+            tempo e recursos com uma solução confiável, suportada por
+            atendimento excepcional ao cliente
           </div>
           <div className="text-gray-500 flex space-x-3">
             <div>
@@ -120,8 +121,8 @@ export default function BecomeI() {
                   Ensine o seus alunos o quanto precisar
                 </b>
               </p>
-              Morbi quis lorem non orci fermentum euismod. Nam sapien tellus,
-              aliquam nec porttitor vel, pellentesque at metus.
+              ensine os seus alunos a partir de um lugar confortável e em um
+              momento de inspiração em que possa expressar a sua arte
             </div>
           </div>
           <div className="text-gray-500 flex space-x-3">
@@ -134,9 +135,8 @@ export default function BecomeI() {
                   Gerencie seu curso e o pagamento num so lugar
                 </b>
               </p>
-              Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh
-              consequat eu. Nullam vel libero pharetra, euismod turpis et,
-              elementum enim.
+              gerencie o seu conteúdo da maneira mais agradádvel a si e aos seus
+              alunos
             </div>
           </div>
           <div className="text-gray-500 flex space-x-3">
@@ -147,8 +147,8 @@ export default function BecomeI() {
               <p className="mb-3">
                 <b className="text-black">Chat com os seus alunos</b>
               </p>
-              Nullam mattis lectus ac diam egestas posuere. Praesent auctor
-              massa orci, ut fermentum eros dictum id.
+              Tire duvidas de forma particular e crie uma boa relação com os
+              seus alunos.
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@ export default function BecomeI() {
                 1. Inscreva-se para se tornar instrutor.
               </p>
               <p className="text-gray-500 text-xs text-center">
-                Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh.
+                com apenas alguns clickes torne-se instrutor e comece a ensinar.{" "}
               </p>
             </div>
             <div className="bg-white flex flex-col justify-center items-center space-y-4 p-4 w-96">
@@ -177,8 +177,8 @@ export default function BecomeI() {
               </div>
               <p className="text-center">2. Configure e edite seu perfil.</p>
               <p className="text-gray-500 text-xs text-center">
-                Duis non ipsum at leo efficitur pulvinar. Morbi semper nisi eget
-                accumsan ullamcorper.
+                plataforma de facil acesso para configurar e editação de forma
+                simples o seu perfil
               </p>
             </div>
             <div className="bg-white flex flex-col justify-center items-center space-y-4 p-4 w-96">
@@ -187,8 +187,7 @@ export default function BecomeI() {
               </div>
               <p className="text-center">3. Crie seu novo curso.</p>
               <p className="text-gray-500 text-xs text-center">
-                Praesent congue ornare nibh sed ullamcorper. Proin venenatis
-                tellus non turpis scelerisque.
+                Crie o seu curso e divulgue todo o seu conhecimento para o mundo
               </p>
             </div>
             <div className="bg-white flex flex-col justify-center items-center space-y-4 p-4 w-96">
@@ -197,8 +196,8 @@ export default function BecomeI() {
               </div>
               <p className="text-center">4. Comece a ensinar e ganhar.</p>
               <p className="text-gray-500 text-xs text-center">
-                Praesent congue ornare nibh sed ullamcorper. Proin venenatis
-                tellus non turpis scelerisque.{" "}
+                ensine os seus alunos , ajude a chegar aos seus objectivos e
+                ganhe dinheiro por todo o conhecimento que possue
               </p>
             </div>
           </div>
@@ -211,21 +210,30 @@ export default function BecomeI() {
             Regras e regulações dos Instrutores
           </h2>
           <div className="text-gray-500">
-            Sed auctor, nisl non elementum ornare, turpis orci consequat arcu,
-            at iaculis quam leo nec libero. Aenean mollis turpis velit, id
-            laoreet sem luctus in. Etiam et egestas lorem.{" "}
+            Para manter um ambiente seguro e saudavel para os nossos instrutores
+            e estudantes, regras e regulamentos são essenciais para que tudo
+            aconteça nos conformes
           </div>
 
           <ul className="ml-8 list-disc space-y-2 text-sm">
-            <li>Sed ullamcorper libero quis condimentum pellentesque.</li>
-            <li>Nam leo tortor, tempus et felis non.</li>
             <li>
-              Porttitor faucibus erat. Integer eget purus non massa ultricies
-              pretium ac sed eros.
+              Fornecer conteúdo educacional preciso, atualizado e relevante,
+              alinhado aos objetivos do curso e às normas educacionais
+              estabelecidas.
             </li>
             <li>
-              Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet
-              turpi.
+              Respeitar os direitos autorais, utilizando apenas material de sua
+              autoria e protegido por direitos autorais de maneira legal e
+              ética, ou obtendo permissões adequadas quando necessário.
+            </li>
+            <li>
+              Promover um ambiente de aprendizado respeitoso e inclusivo,
+              incentivando a participação e a troca construtiva de ideias entre
+              os alunos.
+            </li>
+            <li>
+              Adoptar práticas éticas no ensino online, evitando plágio, fraudes
+              acadêmicas e qualquer comportamento antiético.
             </li>
           </ul>
         </div>
@@ -242,30 +250,28 @@ export default function BecomeI() {
 
         <div className="flex flex-col space-y-4 justify-center mx-10">
           <h2 className="text-4xl font-semibold">
-            Não se preocupem, nós sempre ajudaremos você
+            As sua preocupações são as nossas e nós nos importamos com elas{" "}
           </h2>
           <div className="text-gray-500">
-            Mauris aliquet ornare tortor, ut mollis arcu luctus quis. Phasellus
-            nec augue malesuada, sagittis ligula vel, faucibus metus. Nam
-            viverra metus eget nunc dignissim.
+            Estaremos sempre disponivel para tirar as suas duvidas e ajudar com
+            qualquer problema que possa vir a ter.
           </div>
 
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <GoArrowRight color="FF6636" /> Sed ullamcorper libero quis
-              condimentum pellentesque.
+              <GoArrowRight color="FF6636" /> Atendimento disponivel 24h
             </li>
             <li className="flex items-center gap-2">
-              <GoArrowRight color="FF6636" /> Nam leo tortor, tempus et felis
-              non.
+              <GoArrowRight color="FF6636" /> Qualquer tipo de reclamação sera
+              gravada para futuras melhorias
             </li>
             <li className="flex items-center gap-2">
-              <GoArrowRight color="FF6636" /> Porttitor faucibus erat. Integer
-              eget purus non massa ultricies pretium ac sed eros.
+              <GoArrowRight color="FF6636" /> Tanto estudantes como instrutores
+              terão mesmo nivel de suporte independente do tempo na plataforma
             </li>
             <li className="flex items-center gap-2">
-              <GoArrowRight color="FF6636" /> Vestibulum ultrices commodo
-              tellus. Etiam eu lectus sit amet turpi.
+              <GoArrowRight color="FF6636" /> Possuimos também email como forma
+              de contacto
             </li>
           </ul>
         </div>
@@ -274,20 +280,22 @@ export default function BecomeI() {
       <div className="grid grid-cols-1 md:grid-cols-2 p-24">
         <div className="flex flex-col space-y-4 justify-center mx-14">
           <h2 className="text-4xl font-semibold">
-            Varios instrutores já tornaram as suas carreiras em grandes sucessos
+            Vários instrutores já tornaram as suas carreiras em grandes sucessos{" "}
           </h2>
           <div className="text-gray-500">
-            Nunc euismod sapien non felis eleifend porttitor. Maecenas dictum
-            eros justo, id commodo ante laoreet nec. Phasellus aliquet, orci id
-            pellentesque mollis.
+            Faça como os nosso instrutores e torne-se um grande instrutor,
+            impulsionando a sua carreira e valorizando cada vez mais o seu
+            conhecimento
           </div>
 
           <div className="bg-peach w-full p-4 flex flex-col gap-4">
             <BiConversation color="FF6636" size={45} />
-            Nulla sed malesuada augue. Morbi interdum vulputate imperdiet.
-            Pellentesque ullamcorper auctor ante, egestas interdum quam
-            facilisis commodo. Phasellus efficitur quis ex in consectetur.
-            Mauris tristique suscipit metus, a molestie dui dapibus vel.
+            Fazia anos que não conseguia transmitir o meu conhecimento de forma
+            adequada para os meus alunos o que me tornava um instrutor mediano e
+            não conseguia expandir a minha carreira. Agora além de conseguir
+            impulsionar a minha carreira ainda consigo aprender e transmitir o
+            meu conhecimento de forma mais adequada dando a atenção aos meus
+            aluno de forma personalizada
           </div>
 
           <div className="space-x-2">

@@ -3,6 +3,7 @@ import Image from "next/image";
 import course from "../../public/course4.png";
 import { ChatText, Users } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
+import { api } from "@/lib/api";
 
 type Props = {
   title: string;
@@ -25,7 +26,13 @@ export default function Curso({
   return (
     <Link href={`/courses/single/${id}`} className="">
       <div className="m-1.5 border bg-white border-gray-100">
-        <Image src={course} alt="course" />
+        <div className="`w-40 h-40 relative overflow-hidden">
+          <Image
+            fill
+            src={thumb ? `${api.getUri()}/${thumb}` : course}
+            alt="course 1"
+          />
+        </div>
 
         <div className="flex justify-between p-2 items-center">
           <p className="text-xs bg-red-100 p-1">{categorie}</p>

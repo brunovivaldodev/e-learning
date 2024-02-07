@@ -23,7 +23,7 @@ export default function Footer() {
               <Link href="/instructor/become">Junta-se à família</Link>
             </div>
             <div className="flex bg-gray-700 w-48 h-10 p-2 text-white">
-              <Link href="/courses/list">Visualizar todos cursos</Link>
+              <Link href="/courses/list">Todos cursos</Link>
             </div>
           </div>
         </div>

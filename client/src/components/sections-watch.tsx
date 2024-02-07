@@ -62,16 +62,23 @@ export function SectionsWatch({ sections, courseId, token }: Props) {
             Descrição das palestras
           </h2>
           <p className="text-sm text-gray-600">
-            We cover everything you need to build your first website. From
-            creating your first page through to uploading your website to the
-            internet. We’ll use the world’s most popular (and free) web design
-            tool called Visual Studio Code. There are exercise files you can
-            download and then work along with me. At the end of each video I
-            have a downloadable version of where we are in the process so that
-            you can compare your project with mine. This will enable you to see
-            easily where you might have a problem. We will delve into all the
-            good stuff such as how to create your very own mobile burger menu
-            from scratch learning some basic JavaScript and jQuery.
+            Este curso prático capacita designers a criar interfaces
+            responsivas, da concepção no Figma à implementação no Webflow.
+            Abordando fundamentos do design responsivo, exploração do Figma,
+            transição eficiente para o Webflow, e práticas avançadas de layouts
+            e interatividade. Ideal para designers buscando habilidades sólidas
+            em design adaptativo para diferentes dispositivos. Metodologia:
+            Combina videoaulas, exercícios práticos e projetos hands-on para uma
+            aprendizagem aplicada e colaborativa. Pré-requisitos: Conhecimento
+            básico em design de interface e familiaridade com Figma e Webflow
+            são recomendados. Objetivo: Ao término, os participantes serão
+            capazes de criar designs responsivos de alta qualidade, dominando as
+            ferramentas e conceitos essenciais para enfrentar desafios
+            contemporâneos no design digital. Ao final do curso, os
+            participantes serão capazes de criar designs responsivos de alta
+            qualidade, desde a concepção no Figma até a implementação eficaz no
+            Webflow, capacitando-os a enfrentar os desafios do design para
+            dispositivos diversos.
           </p>
         </div>
 
